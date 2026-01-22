@@ -10,7 +10,7 @@ class BuyerController extends Controller
 {
     public function index(Request $request): View
     {
-        return view('dashboard.buyer', [
+        return view('dashboard.buyer.index', [
             'user' => $request->user(),
         ]);
     }
