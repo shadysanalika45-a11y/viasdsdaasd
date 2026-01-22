@@ -14,9 +14,20 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('install.check')->group(function () {
     Route::view('/', 'pages.home')->name('home');
     Route::view('/pricing', 'pages.pricing')->name('pricing');
+    Route::view('/creators', 'pages.creators')->name('creators');
+    Route::view('/agencies', 'pages.agencies')->name('agencies');
+    Route::view('/brands', 'pages.brands')->name('brands');
+    Route::view('/ecommerce', 'pages.ecommerce')->name('ecommerce');
     Route::view('/contact', 'pages.contact')->name('contact');
-    Route::view('/login', 'auth.login')->name('login.form');
-    Route::view('/register', 'auth.register')->name('register.form');
+    Route::view('/conditions', 'pages.conditions')->name('conditions');
+    Route::view('/policy', 'pages.policy')->name('policy');
+    Route::view('/refund', 'pages.refund')->name('refund');
+    Route::view('/package-policy', 'pages.package-policy')->name('package.policy');
+    Route::view('/login', 'pages.login')->name('login.form');
+    Route::view('/forget-password', 'pages.forget-password')->name('password.request');
+    Route::view('/register', 'pages.client-register')->name('register.form');
+    Route::view('/creator/register', 'pages.creator-register')->name('creator.register');
+    Route::view('/client/register', 'pages.client-register')->name('client.register');
 
     Route::post('/login', [AuthController::class, 'login'])->name('login');
     Route::post('/register', [AuthController::class, 'register'])->name('register');
