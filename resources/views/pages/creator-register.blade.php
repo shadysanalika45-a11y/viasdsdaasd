@@ -10,28 +10,28 @@
 @endsection
 
 @push('styles')
-    <link rel="stylesheet" type="text/css" href="../users-asset/vendors/css/vendors-rtl.min.css">
-    <link rel="stylesheet" type="text/css" href="../users-asset/css-rtl/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="../users-asset/css-rtl/bootstrap-extended.css">
-    <link rel="stylesheet" type="text/css" href="../users-asset/css-rtl/colors.css">
-    <link rel="stylesheet" type="text/css" href="../users-asset/css-rtl/components.css">
-    <link rel="stylesheet" type="text/css" href="../users-asset/css-rtl/themes/dark-layout.css">
-    <link rel="stylesheet" type="text/css" href="../users-asset/css-rtl/themes/bordered-layout.css">
-    <link rel="stylesheet" type="text/css" href="../users-asset/css-rtl/themes/semi-dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('users-asset/vendors/css/vendors-rtl.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('users-asset/css-rtl/bootstrap.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('users-asset/css-rtl/bootstrap-extended.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('users-asset/css-rtl/colors.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('users-asset/css-rtl/components.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('users-asset/css-rtl/themes/dark-layout.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('users-asset/css-rtl/themes/bordered-layout.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('users-asset/css-rtl/themes/semi-dark-layout.css') }}">
     <link rel="stylesheet" type="text/css"
-        href="../users-asset/css-rtl/core/menu/menu-types/vertical-menu.css">
-    <link rel="stylesheet" type="text/css" href="../users-asset/css-rtl/plugins/forms/form-validation.css">
-    <link rel="stylesheet" type="text/css" href="../users-asset/css-rtl/pages/authentication.css">
-    <link rel="stylesheet" type="text/css" href="../users-asset/css-rtl/custom-rtl.css">
-    <link rel="stylesheet" type="text/css" href="../users-asset/assets/css/style-rtl.css">
-    <link rel="stylesheet" href="../users-asset/lib/countries/style.css">
-    <link href="../users-asset/system/css/rtl.css" rel="stylesheet">
-    <link href="../website/lib/font/Messiri.css" rel="stylesheet">
-    <link href="../users-asset/system/css/base.css" rel="stylesheet">
+        href="{{ asset('users-asset/css-rtl/core/menu/menu-types/vertical-menu.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('users-asset/css-rtl/plugins/forms/form-validation.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('users-asset/css-rtl/pages/authentication.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('users-asset/css-rtl/custom-rtl.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('users-asset/assets/css/style-rtl.css') }}">
+    <link rel="stylesheet" href="{{ asset('users-asset/lib/countries/style.css') }}">
+    <link href="{{ asset('users-asset/system/css/rtl.css') }}" rel="stylesheet">
+    <link href="{{ asset('website/lib/font/Messiri.css') }}" rel="stylesheet">
+    <link href="{{ asset('users-asset/system/css/base.css') }}" rel="stylesheet">
 @endpush
 
 @push('head_scripts')
-    <script src="../../code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -57,13 +57,13 @@
                     <div class="auth-inner row m-0">
                         <!-- Brand logo-->
                         <a class="brand-logo" href="{{ route('home') }}">
-                            <img src="../users-asset/images/logo/logo.png" alt="logo" width="120px" />
+                            <img src="{{ asset('users-asset/images/logo/logo.png') }}" alt="logo" width="120px" />
                         </a>
                         <!-- /Brand logo-->
                         <!-- Left Text-->
                         <div class="d-none d-lg-flex col-lg-7 align-items-center p-0 web-logo">
                             <div class="h-100">
-                                <img class="img-fluid" src="../website/images/home/2.png"
+                                <img class="img-fluid" src="{{ asset('website/images/home/2.png') }}"
                                     alt="Register V2" />
                             </div>
                         </div>
@@ -71,12 +71,14 @@
                         <!-- Register-->
                         <div class="d-flex col-lg-5 align-items-center auth-bg p-0">
                             <div class="col-12 col-sm-8 col-md-6 col-lg-12 px-xl-2 mx-auto">
-                                <form class="mx-5 mt-4" id="register-form" action="https://vidoo.app/creator/register"
+                                <form class="mx-5 mt-4" id="register-form" action="{{ route('register') }}"
                                     method="POST">
                                     <h4 class="card-title mb-1 fw-bolder">انضم إلى مجتمع فيدوو وابدأ رحلتك الإبداعية!
                                     </h4>
                                     <p class="card-text">سجّل الآن للوصول إلى فرص التعاون مع علامات تجارية رائدة وإنشاء محتوى يعبر عن إبداعك. فيدوو هو مكانك المثالي للتميز وتحقيق النجاح في عالم صناعة المحتوى.</p>
-                                    <input type="hidden" name="_token" value="p6U4weZ680MitaoiaLfJkptsRFKXRmXfkgEtpLev">                                    <div class="row">
+                                    @csrf
+                                    <input type="hidden" name="role" value="creator">
+                                    <div class="row">
 
                                         <div class="col-md-12 mb-1">
                                             <label for="name" class="form-label">الاسم</label>
@@ -147,6 +149,17 @@
                                             </div>
                                                                                     </div>
                                         <div class="col-md-12 mb-1">
+                                            <label for="password_confirmation" class="form-label">تأكيد كلمة المرور</label>
+                                            <div class="input-group input-group-merge form-password-toggle">
+                                                <input type="password"
+                                                    class="form-control form-control-merge register-input"
+                                                    id="password_confirmation" name="password_confirmation"
+                                                    aria-describedby="password_confirmation" tabindex="4" required />
+                                                <span class="input-group-text cursor-pointer"><i
+                                                        data-feather="eye"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 mb-1">
                                             <div class="form-check">
                                                 <input class="form-check-input register-input" type="checkbox"
                                                     id="agree" name="agree" tabindex="4" required />
@@ -214,11 +227,11 @@
     '../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-FF22N97D');
 </script>
-    <script src="../users-asset/vendors/js/vendors.min.js"></script>
-    <script src="../users-asset/vendors/js/forms/validation/jquery.validate.min.js"></script>
-    <script src="../users-asset/js/core/app-menu.js"></script>
-    <script src="../users-asset/js/core/app.js"></script>
-    <script src="../users-asset/js/scripts/pages/auth-register.js"></script>
+    <script src="{{ asset('users-asset/vendors/js/vendors.min.js') }}"></script>
+    <script src="{{ asset('users-asset/vendors/js/forms/validation/jquery.validate.min.js') }}"></script>
+    <script src="{{ asset('users-asset/js/core/app-menu.js') }}"></script>
+    <script src="{{ asset('users-asset/js/core/app.js') }}"></script>
+    <script src="{{ asset('users-asset/js/scripts/pages/auth-register.js') }}"></script>
     <script>
         $(window).on('load', function() {
             if (feather) {
@@ -257,5 +270,5 @@
         selected_option = document.querySelector('.selected-option div');
         let options = null;
     </script>
-    <script src="../users-asset/lib/countries/script.js"></script>
+    <script src="{{ asset('users-asset/lib/countries/script.js') }}"></script>
 @endpush

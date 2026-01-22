@@ -206,9 +206,9 @@
             <div class="row">
 
 
-                <form method="POST" action="https://vidoo.app/support">
+                <form method="POST" action="{{ route('agencies.submit') }}">
+                    @csrf
                     <div class="row">
-                        <input type="hidden" name="_token" value="p6U4weZ680MitaoiaLfJkptsRFKXRmXfkgEtpLev">
                         <div class="col-md-6 my-2">
 
                             <label class="fw-bold mb-2">اسم المتجر</label>

@@ -10,28 +10,28 @@
 @endsection
 
 @push('styles')
-    <link rel="stylesheet" type="text/css" href="../users-asset/vendors/css/vendors-rtl.min.css">
-    <link rel="stylesheet" type="text/css" href="../users-asset/css-rtl/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="../users-asset/css-rtl/bootstrap-extended.css">
-    <link rel="stylesheet" type="text/css" href="../users-asset/css-rtl/colors.css">
-    <link rel="stylesheet" type="text/css" href="../users-asset/css-rtl/components.css">
-    <link rel="stylesheet" type="text/css" href="../users-asset/css-rtl/themes/dark-layout.css">
-    <link rel="stylesheet" type="text/css" href="../users-asset/css-rtl/themes/bordered-layout.css">
-    <link rel="stylesheet" type="text/css" href="../users-asset/css-rtl/themes/semi-dark-layout.css">
-    <link rel="stylesheet" type="text/css" href="../users-asset/vendors/css/forms/select/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('users-asset/vendors/css/vendors-rtl.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('users-asset/css-rtl/bootstrap.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('users-asset/css-rtl/bootstrap-extended.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('users-asset/css-rtl/colors.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('users-asset/css-rtl/components.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('users-asset/css-rtl/themes/dark-layout.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('users-asset/css-rtl/themes/bordered-layout.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('users-asset/css-rtl/themes/semi-dark-layout.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('users-asset/vendors/css/forms/select/select2.min.css') }}">
     <link rel="stylesheet" type="text/css"
-        href="../users-asset/css-rtl/core/menu/menu-types/vertical-menu.css">
-    <link rel="stylesheet" type="text/css" href="../users-asset/css-rtl/pages/authentication.css">
-    <link rel="stylesheet" type="text/css" href="../users-asset/css-rtl/custom-rtl.css">
-    <link rel="stylesheet" type="text/css" href="../users-asset/assets/css/style-rtl.css">
-    <link rel="stylesheet" href="../users-asset/lib/countries/style.css">
-    <link href="../users-asset/system/css/rtl.css" rel="stylesheet">
-    <link href="../website/lib/font/Messiri.css" rel="stylesheet">
-    <link href="../users-asset/system/css/base.css" rel="stylesheet">
+        href="{{ asset('users-asset/css-rtl/core/menu/menu-types/vertical-menu.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('users-asset/css-rtl/pages/authentication.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('users-asset/css-rtl/custom-rtl.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('users-asset/assets/css/style-rtl.css') }}">
+    <link rel="stylesheet" href="{{ asset('users-asset/lib/countries/style.css') }}">
+    <link href="{{ asset('users-asset/system/css/rtl.css') }}" rel="stylesheet">
+    <link href="{{ asset('website/lib/font/Messiri.css') }}" rel="stylesheet">
+    <link href="{{ asset('users-asset/system/css/base.css') }}" rel="stylesheet">
 @endpush
 
 @push('head_scripts')
-    <script src="../../code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -58,15 +58,17 @@
                         <div class="card mb-0">
                             <div class="card-body">
                                 <a href="{{ route('home') }}" class="brand-logo">
-                                    <img src="../users-asset/images/logo/logo-2.png" width="150px" alt="logo">
+                                    <img src="{{ asset('users-asset/images/logo/logo-2.png') }}" width="150px" alt="logo">
                                 </a>
 
                                 <h4 class="card-title mb-1">اشترك الآن وابدأ في تعزيز علامتك التجارية!</h4>
                                 <p class="card-text mb-2">انضم إلى فيدوو للوصول إلى شبكة واسعة من صُناع المحتوى المبدعين الذين يمكنهم إحياء رؤيتك. ابدأ في إنشاء حملات تسويقية فعّالة ومحتوى فيديو مخصص لعلامتك التجارية اليوم.</p>
 
-                                <form class="auth-register-form mt-2" action="https://vidoo.app/client/register"
+                                <form class="auth-register-form mt-2" action="{{ route('register') }}"
                                     method="POST">
-                                    <input type="hidden" name="_token" value="p6U4weZ680MitaoiaLfJkptsRFKXRmXfkgEtpLev">                                    <div class="mb-1">
+                                    @csrf
+                                    <input type="hidden" name="role" value="company">
+                                    <div class="mb-1">
                                         <label for="name" class="form-label">الاسم</label>
                                         <input type="text" class="form-control" id="name" name="name"
                                             value="" aria-describedby="name" tabindex="1" autofocus
@@ -135,6 +137,16 @@
                                         </div>
                                                                             </div>
                                     <div class="mb-1">
+                                        <label for="password_confirmation" class="form-label">تأكيد كلمة المرور</label>
+                                        <div class="input-group input-group-merge form-password-toggle">
+                                            <input type="password" class="form-control form-control-merge"
+                                                id="password_confirmation" name="password_confirmation"
+                                                aria-describedby="password_confirmation" tabindex="4" required />
+                                            <span class="input-group-text cursor-pointer"><i
+                                                    data-feather="eye"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="mb-1">
                                         <div class="form-check">
                                             <input class="form-check-input" name="agree" type="checkbox" id="agree"
                                                 tabindex="4"  required />
@@ -201,12 +213,12 @@
     '../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-FF22N97D');
 </script>
-    <script src="../../www.google.com/recaptcha/api562e.js?hl=ar" async defer></script>
-    <script src="../users-asset/vendors/js/vendors.min.js"></script>
-    <script src="../users-asset/vendors/js/forms/select/select2.full.min.js"></script>
-    <script src="../users-asset/js/core/app-menu.js"></script>
-    <script src="../users-asset/js/core/app.js"></script>
-    <script src="../users-asset/js/scripts/forms/form-select2.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?hl=ar" async defer></script>
+    <script src="{{ asset('users-asset/vendors/js/vendors.min.js') }}"></script>
+    <script src="{{ asset('users-asset/vendors/js/forms/select/select2.full.min.js') }}"></script>
+    <script src="{{ asset('users-asset/js/core/app-menu.js') }}"></script>
+    <script src="{{ asset('users-asset/js/core/app.js') }}"></script>
+    <script src="{{ asset('users-asset/js/scripts/forms/form-select2.js') }}"></script>
     <script>
         $(window).on('load', function() {
             if (feather) {
@@ -225,5 +237,5 @@
         selected_option = document.querySelector('.selected-option div');
         let options = null;
     </script>
-    <script src="../users-asset/lib/countries/script.js"></script>
+    <script src="{{ asset('users-asset/lib/countries/script.js') }}"></script>
 @endpush

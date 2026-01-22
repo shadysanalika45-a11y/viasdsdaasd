@@ -63,8 +63,9 @@
                                 <p class="card-text mb-2">أدخل بريدك الإلكتروني وسنرسل لك تعليمات لإعادة تعيين كلمة المرور الخاصة بك </p>
 
                                 <form class="auth-forgot-password-form mt-2"
-                                    action="https://vidoo.app/forget-password" method="POST">
-                                    <input type="hidden" name="_token" value="p6U4weZ680MitaoiaLfJkptsRFKXRmXfkgEtpLev">                                    <div class="mb-1">
+                                    action="{{ route('password.email') }}" method="POST">
+                                    @csrf
+                                    <div class="mb-1">
                                         <label for="forgot-password-email"
                                             class="form-label">البريد الإلكتروني</label>
                                         <input type="email" class="form-control" id="forgot-password-email" name="email"

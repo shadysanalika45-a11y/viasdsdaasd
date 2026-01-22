@@ -1901,7 +1901,7 @@
             url: "https://vidoo.app/creators/page/filter",
             method: 'POST',
             data: {
-                _token: 'p6U4weZ680MitaoiaLfJkptsRFKXRmXfkgEtpLev',
+                _token: '{{ csrf_token() }}',
                 option: option,
                 country: country,
             },

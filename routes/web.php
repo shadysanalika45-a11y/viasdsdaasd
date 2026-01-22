@@ -9,25 +9,43 @@ use App\Http\Controllers\Dashboard\BuyerController;
 use App\Http\Controllers\Dashboard\CompanyController;
 use App\Http\Controllers\Dashboard\CreatorController;
 use App\Http\Controllers\Install\InstallController;
+use App\Http\Controllers\Pages\AgenciesController;
+use App\Http\Controllers\Pages\BrandsController;
+use App\Http\Controllers\Pages\ClientRegisterController;
+use App\Http\Controllers\Pages\ConditionsController;
+use App\Http\Controllers\Pages\ContactController;
+use App\Http\Controllers\Pages\CreatorRegisterController;
+use App\Http\Controllers\Pages\CreatorsController;
+use App\Http\Controllers\Pages\EcommerceController;
+use App\Http\Controllers\Pages\ForgetPasswordController;
+use App\Http\Controllers\Pages\HomeController;
+use App\Http\Controllers\Pages\LoginPageController;
+use App\Http\Controllers\Pages\PackagePolicyController;
+use App\Http\Controllers\Pages\PolicyController;
+use App\Http\Controllers\Pages\PricingController;
+use App\Http\Controllers\Pages\RefundController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('install.check')->group(function () {
-    Route::view('/', 'pages.home')->name('home');
-    Route::view('/pricing', 'pages.pricing')->name('pricing');
-    Route::view('/creators', 'pages.creators')->name('creators');
-    Route::view('/agencies', 'pages.agencies')->name('agencies');
-    Route::view('/brands', 'pages.brands')->name('brands');
-    Route::view('/ecommerce', 'pages.ecommerce')->name('ecommerce');
-    Route::view('/contact', 'pages.contact')->name('contact');
-    Route::view('/conditions', 'pages.conditions')->name('conditions');
-    Route::view('/policy', 'pages.policy')->name('policy');
-    Route::view('/refund', 'pages.refund')->name('refund');
-    Route::view('/package-policy', 'pages.package-policy')->name('package.policy');
-    Route::view('/login', 'pages.login')->name('login.form');
-    Route::view('/forget-password', 'pages.forget-password')->name('password.request');
-    Route::view('/register', 'pages.client-register')->name('register.form');
-    Route::view('/creator/register', 'pages.creator-register')->name('creator.register');
-    Route::view('/client/register', 'pages.client-register')->name('client.register');
+    Route::get('/', [HomeController::class, 'index'])->name('home');
+    Route::get('/pricing', [PricingController::class, 'index'])->name('pricing');
+    Route::get('/creators', [CreatorsController::class, 'index'])->name('creators');
+    Route::get('/agencies', [AgenciesController::class, 'index'])->name('agencies');
+    Route::get('/brands', [BrandsController::class, 'index'])->name('brands');
+    Route::get('/ecommerce', [EcommerceController::class, 'index'])->name('ecommerce');
+    Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+    Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
+    Route::get('/conditions', [ConditionsController::class, 'index'])->name('conditions');
+    Route::get('/policy', [PolicyController::class, 'index'])->name('policy');
+    Route::get('/refund', [RefundController::class, 'index'])->name('refund');
+    Route::get('/package-policy', [PackagePolicyController::class, 'index'])->name('package.policy');
+    Route::get('/login', [LoginPageController::class, 'index'])->name('login.form');
+    Route::get('/forget-password', [ForgetPasswordController::class, 'index'])->name('password.request');
+    Route::post('/forget-password', [ForgetPasswordController::class, 'submit'])->name('password.email');
+    Route::get('/register', [ClientRegisterController::class, 'index'])->name('register.form');
+    Route::get('/creator/register', [CreatorRegisterController::class, 'index'])->name('creator.register');
+    Route::get('/client/register', [ClientRegisterController::class, 'index'])->name('client.register');
+    Route::post('/support/agencies', [AgenciesController::class, 'submit'])->name('agencies.submit');
 
     Route::post('/login', [AuthController::class, 'login'])->name('login');
     Route::post('/register', [AuthController::class, 'register'])->name('register');
@@ -47,6 +65,16 @@ Route::middleware('install.check')->group(function () {
 
         Route::middleware('role:creator')->group(function () {
             Route::get('/dashboard/creator', [CreatorController::class, 'index'])->name('dashboard.creator');
+            Route::post('/dashboard/creator/intro-video', [CreatorController::class, 'storeIntroVideo'])
+                ->name('dashboard.creator.intro-video');
+            Route::post('/dashboard/creator/balance/deposit', [CreatorController::class, 'storeDeposit'])
+                ->name('dashboard.creator.balance.deposit');
+            Route::post('/dashboard/creator/balance/withdraw', [CreatorController::class, 'storeWithdrawal'])
+                ->name('dashboard.creator.balance.withdraw');
+            Route::post('/dashboard/creator/support', [CreatorController::class, 'storeSupportMessage'])
+                ->name('dashboard.creator.support');
+            Route::post('/dashboard/creator/orders/{order}/status', [CreatorController::class, 'updateOrderStatus'])
+                ->name('dashboard.creator.orders.status');
         });
 
         Route::middleware('role:admin')->prefix('admin')->name('admin.')->group(function () {

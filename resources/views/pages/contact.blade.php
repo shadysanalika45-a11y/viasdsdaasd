@@ -65,9 +65,9 @@
 
             <p>او يمكنكم ترك البريد الالكتروني الخاص بكم واستفساركم وفريق الدعم سوف يتواصل معكم في اقرب وقت</p>
 
-            <form method="POST" action="https://vidoo.app/support">
+            <form method="POST" action="{{ route('contact.submit') }}">
+            @csrf
             <div class="row">
-                <input type="hidden" name="_token" value="p6U4weZ680MitaoiaLfJkptsRFKXRmXfkgEtpLev">
                 <div class="col-md-6 my-2">
 
 
