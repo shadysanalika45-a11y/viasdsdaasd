@@ -10,7 +10,7 @@ class CompanyController extends Controller
 {
     public function index(Request $request): View
     {
-        return view('dashboard.company', [
+        return view('dashboard.company.index', [
             'user' => $request->user(),
         ]);
     }

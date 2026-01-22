@@ -1,0 +1,51 @@
+# Project V1 Map
+
+## Overview
+This document summarizes the updates applied in this iteration and highlights remaining gaps.
+
+## Implemented Updates
+- Added balance and transaction domain models (`Balance`, `Transaction`) and a `Video` model to track uploads and points.
+- Created a `BalanceController` for client/creator balance screens and add/withdraw actions.
+- Created a `VideoController` to award points on upload and list creator video points.
+- Expanded `AdminController` to show balance/points stats and configure point settings.
+- Added new balance and points dashboards:
+  - `client-balance.blade.php`
+  - `creator-balance.blade.php`
+  - `creator-video-points.blade.php`
+  - `admin-video-points.blade.php`
+- Added Laravel Mix setup (`package.json`, `webpack.mix.js`) and wired `mix()` assets in the layout.
+- Introduced global dashboard styling via `resources/css/app.css` and `resources/js/app.js`.
+
+## Project Structure Map
+- `app/Http/Controllers`
+  - `Admin/AdminController.php`: Admin dashboard + video points settings.
+  - `Dashboard/BalanceController.php`: Balance views + add/withdraw actions.
+  - `Dashboard/ClientController.php`: Client dashboard overview.
+  - `Dashboard/CreatorController.php`: Creator dashboard + offer/support/order status.
+  - `Dashboard/VideoController.php`: Creator video uploads + points totals.
+- `app/Models`
+  - `Balance`, `Transaction`, `Video` (new), existing `Plan`, `Subscription`, `Payment`.
+- `resources/views/dashboard`
+  - `client-dashboard.blade.php`
+  - `client-balance.blade.php`
+  - `creator-dashboard.blade.php`
+  - `creator-balance.blade.php`
+  - `creator-video-points.blade.php`
+- `resources/views/admin`
+  - `admin-dashboard.blade.php`
+  - `admin-video-points.blade.php`
+- `resources/css/app.css`, `resources/js/app.js`
+- `public/mix-manifest.json`, `public/css/app.css`, `public/js/app.js`
+
+## Missing / To Be Implemented
+- Database migrations for `balances`, `transactions`, and `videos`.
+- Integration with Laravel Cashier (no dependency configured yet).
+- Payment gateway integration (Stripe/PayPal) and secure OTP/email confirmation on balance operations.
+- Real-time reporting for performance stats, campaigns, and invoice data.
+- API endpoints for real-time balances/points updates.
+- Admin CRUD screens for plan management if not already present.
+- Production build pipeline for Laravel Mix (CI/CD step).
+
+## Notes
+- Current points and balance logic is implemented at controller level for the UI flow; once migrations and Cashier are added, logic should be updated to persist and validate properly.
+- The layout now uses `mix()` helper; ensure `npm install && npm run dev` produces updated assets before deployment.

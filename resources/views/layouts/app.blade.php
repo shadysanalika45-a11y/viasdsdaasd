@@ -1,18 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="loading" lang="@yield('html_lang', 'ar')" dir="@yield('html_dir', 'rtl')" data-textdirection="ltr"
+    style="direction: rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @yield('meta')
+    <link rel="apple-touch-icon" href="{{ asset('users-asset/images/logo/favicon.ico') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('users-asset/images/logo/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ asset('website/css/footer.css') }}">
     <title>{{ config('app.name', 'Vidoo') }} - @yield('title')</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    @stack('styles')
+    @stack('head_scripts')
 </head>
-<body>
-    @include('partials.header')
+<body class="@yield('body_class', 'horizontal-layout horizontal-menu footer-static')">
+    @unless (trim($__env->yieldContent('hide_header')))
+        @include('partials.header')
+    @endunless
+
+    @if (trim($__env->yieldContent('show_sidebar')))
+        @include('partials.sidebar')
+    @endif
 
     <main class="app-content">
         @yield('content')
     </main>
 
-    @include('partials.footer')
+    @unless (trim($__env->yieldContent('hide_footer')))
+        @include('partials.footer')
+    @endunless
+
+    <script src="{{ mix('js/app.js') }}"></script>
+    @stack('scripts')
 </body>
 </html>

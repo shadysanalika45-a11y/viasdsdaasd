@@ -12,7 +12,7 @@ class AdminDashboardController extends Controller
 {
     public function index(): View
     {
-        return view('admin.dashboard', [
+        return view('dashboard.admin.index', [
             'users' => User::count(),
             'subscriptions' => Subscription::count(),
             'payments' => Payment::count(),
