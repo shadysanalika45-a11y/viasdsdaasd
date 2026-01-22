@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html class="loading" lang="@yield('html_lang', 'ar')" dir="@yield('html_dir', 'rtl')" data-textdirection="ltr"
-    style="direction: rtl">
+<html class="loading"
+    lang="@yield('html_lang', app()->getLocale())"
+    dir="@yield('html_dir', app()->getLocale() === 'en' ? 'ltr' : 'rtl')"
+    data-textdirection="ltr"
+    style="direction: {{ app()->getLocale() === 'en' ? 'ltr' : 'rtl' }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

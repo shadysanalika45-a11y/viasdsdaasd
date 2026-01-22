@@ -120,6 +120,23 @@
                     </div>
                 </div>
             </div>
+
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">روابط سريعة</h5>
+                        <div class="d-flex flex-wrap gap-2">
+                            <a class="btn btn-outline-secondary" href="{{ route('client.search') }}">البحث المتقدم</a>
+                            <a class="btn btn-outline-secondary" href="{{ route('client.notifications') }}">الإشعارات</a>
+                            <a class="btn btn-outline-secondary" href="{{ route('client.messages') }}">الرسائل</a>
+                            <a class="btn btn-outline-secondary" href="{{ route('client.subscription') }}">إشتراكي</a>
+                            <a class="btn btn-outline-secondary" href="{{ route('client.marketing') }}">التسويق</a>
+                            <a class="btn btn-outline-secondary" href="{{ route('client.orders') }}">طلباتي</a>
+                            <a class="btn btn-outline-primary" href="{{ route('client.request-video') }}">طلب فيديو جديد</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 @endsection

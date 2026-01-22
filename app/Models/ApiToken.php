@@ -5,27 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Transaction extends Model
+class ApiToken extends Model
 {
     use HasFactory;
 
     protected $fillable = [
         'user_id',
-        'type',
-        'amount',
-        'points',
-        'status',
-        'gateway',
-        'reference',
-        'verification_code',
-        'verified_at',
-        'description',
+        'name',
+        'token',
+        'last_used_at',
     ];
 
     protected $casts = [
-        'amount' => 'decimal:2',
-        'points' => 'integer',
-        'verified_at' => 'datetime',
+        'last_used_at' => 'datetime',
     ];
 
     public function user()

@@ -49,4 +49,55 @@ class AdminController extends Controller
 
         return back()->with('status', 'تم تحديث إعدادات النقاط بنجاح.');
     }
+
+    public function reports(): View
+    {
+        $balanceSummary = Transaction::selectRaw('DATE(created_at) as day, SUM(amount) as total')
+            ->where('type', 'credit')
+            ->groupBy('day')
+            ->orderBy('day')
+            ->take(14)
+            ->get();
+
+        $videoSummary = Video::selectRaw('DATE(created_at) as day, COUNT(*) as total')
+            ->groupBy('day')
+            ->orderBy('day')
+            ->take(14)
+            ->get();
+
+        return view('admin.reports', [
+            'balanceSummary' => $balanceSummary,
+            'videoSummary' => $videoSummary,
+            'totalBalance' => Transaction::where('type', 'credit')->sum('amount'),
+            'totalPoints' => Video::sum('points_awarded'),
+            'activeSubscriptions' => Subscription::where('status', 'active')->count(),
+        ]);
+    }
+
+    public function subscriptions(): View
+    {
+        return view('admin.subscriptions', [
+            'plans' => Plan::orderBy('price')->get(),
+            'activeSubscriptions' => Subscription::where('status', 'active')->count(),
+            'totalSubscriptions' => Subscription::count(),
+        ]);
+    }
+
+    public function payments(): View
+    {
+        return view('admin.payments', [
+            'recentTransactions' => Transaction::latest()->take(6)->get(),
+            'totalBalance' => Transaction::where('type', 'credit')->sum('amount'),
+        ]);
+    }
+
+    public function messages(): View
+    {
+        return view('admin.messages', [
+            'flags' => [
+                ['thread' => 'طلب #102', 'reason' => 'محتوى غير لائق', 'status' => 'بانتظار المراجعة'],
+                ['thread' => 'محادثة شركة الأفق', 'reason' => 'بلاغ إساءة', 'status' => 'تمت المعالجة'],
+            ],
+        ]);
+    }
 }
