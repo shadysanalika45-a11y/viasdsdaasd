@@ -88,6 +88,12 @@
                 <a href="{{ route('admin.reports') }}" class="btn btn-outline-success mt-3 ms-2">
                     التقارير الحية
                 </a>
+                <div class="d-flex flex-wrap gap-2 mt-3">
+                    <a href="{{ route('admin.subscriptions') }}" class="btn btn-outline-secondary">إدارة الاشتراكات</a>
+                    <a href="{{ route('admin.payments') }}" class="btn btn-outline-secondary">إدارة المدفوعات</a>
+                    <a href="{{ route('admin.messages') }}" class="btn btn-outline-secondary">إدارة الرسائل</a>
+                    <a href="{{ route('admin.manual-payments.index') }}" class="btn btn-outline-secondary">المدفوعات اليدوية</a>
+                </div>
             </div>
         </div>
     </div>

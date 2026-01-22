@@ -19,6 +19,80 @@ class CreatorController extends Controller
         ]);
     }
 
+    public function addVideo(): View
+    {
+        return view('dashboard.creator.add-video', [
+            'categories' => ['تقني', 'تعليمي', 'ترفيهي', 'إعلاني'],
+        ]);
+    }
+
+    public function blog(): View
+    {
+        return view('dashboard.creator.blog', [
+            'drafts' => ['كيف تخطط لمحتوى أسبوعي', 'أفضل أدوات المونتاج السريعة'],
+        ]);
+    }
+
+    public function orders(): View
+    {
+        return view('dashboard.creator.orders', [
+            'orders' => [
+                ['id' => '#204', 'client' => 'شركة الأفق', 'status' => 'جديد'],
+                ['id' => '#205', 'client' => 'منصة سيل', 'status' => 'قيد التنفيذ'],
+            ],
+        ]);
+    }
+
+    public function messages(): View
+    {
+        return view('dashboard.creator.messages', [
+            'threads' => [
+                ['name' => 'شركة الأفق', 'last_message' => 'نود معرفة موعد التسليم.', 'status' => 'جديد'],
+                ['name' => 'مؤسسة إبداع', 'last_message' => 'تم استلام الفيديو، شكرًا.', 'status' => 'مكتمل'],
+            ],
+        ]);
+    }
+
+    public function notifications(): View
+    {
+        return view('dashboard.creator.notifications', [
+            'notifications' => [
+                'تمت إضافة نقاط جديدة بعد رفع الفيديو الأخير.',
+                'لديك طلب جديد يحتاج الموافقة.',
+                'تم تحويل رصيد إلى حسابك.',
+            ],
+        ]);
+    }
+
+    public function statistics(): View
+    {
+        return view('dashboard.creator.statistics', [
+            'stats' => [
+                'views' => 12450,
+                'likes' => 820,
+                'comments' => 96,
+                'points' => 3100,
+            ],
+        ]);
+    }
+
+    public function reels(): View
+    {
+        return view('dashboard.creator.reels', [
+            'reels' => ['ريل توضيحي للمنتج', 'ريل إعلان تخفيضات', 'ريل كواليس التصوير'],
+        ]);
+    }
+
+    public function ratings(): View
+    {
+        return view('dashboard.creator.ratings', [
+            'ratings' => [
+                ['video' => 'فيديو حملة الصيف', 'score' => 4.8, 'count' => 32],
+                ['video' => 'مراجعة تطبيق', 'score' => 4.5, 'count' => 18],
+            ],
+        ]);
+    }
+
     public function storeIntroVideo(Request $request): RedirectResponse
     {
         $request->validate([

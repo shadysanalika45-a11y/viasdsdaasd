@@ -73,4 +73,31 @@ class AdminController extends Controller
             'activeSubscriptions' => Subscription::where('status', 'active')->count(),
         ]);
     }
+
+    public function subscriptions(): View
+    {
+        return view('admin.subscriptions', [
+            'plans' => Plan::orderBy('price')->get(),
+            'activeSubscriptions' => Subscription::where('status', 'active')->count(),
+            'totalSubscriptions' => Subscription::count(),
+        ]);
+    }
+
+    public function payments(): View
+    {
+        return view('admin.payments', [
+            'recentTransactions' => Transaction::latest()->take(6)->get(),
+            'totalBalance' => Transaction::where('type', 'credit')->sum('amount'),
+        ]);
+    }
+
+    public function messages(): View
+    {
+        return view('admin.messages', [
+            'flags' => [
+                ['thread' => 'طلب #102', 'reason' => 'محتوى غير لائق', 'status' => 'بانتظار المراجعة'],
+                ['thread' => 'محادثة شركة الأفق', 'reason' => 'بلاغ إساءة', 'status' => 'تمت المعالجة'],
+            ],
+        ]);
+    }
 }
