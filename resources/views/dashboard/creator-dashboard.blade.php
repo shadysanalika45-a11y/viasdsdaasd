@@ -175,6 +175,24 @@
                     </div>
                 </div>
             </div>
+
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">روابط سريعة</h5>
+                        <div class="d-flex flex-wrap gap-2">
+                            <a class="btn btn-outline-secondary" href="{{ route('creator.add-video') }}">إضافة فيديو</a>
+                            <a class="btn btn-outline-secondary" href="{{ route('creator.blog') }}">المدونة</a>
+                            <a class="btn btn-outline-secondary" href="{{ route('creator.orders') }}">الطلبات الواردة</a>
+                            <a class="btn btn-outline-secondary" href="{{ route('creator.messages') }}">الرسائل</a>
+                            <a class="btn btn-outline-secondary" href="{{ route('creator.notifications') }}">الإشعارات</a>
+                            <a class="btn btn-outline-secondary" href="{{ route('creator.statistics') }}">الإحصائيات</a>
+                            <a class="btn btn-outline-secondary" href="{{ route('creator.reels') }}">ريلز</a>
+                            <a class="btn btn-outline-secondary" href="{{ route('creator.ratings') }}">تقييمات الفيديو</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 @endsection
