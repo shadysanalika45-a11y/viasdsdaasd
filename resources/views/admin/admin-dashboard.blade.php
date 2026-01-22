@@ -82,6 +82,12 @@
                 <a href="{{ route('admin.video.points') }}" class="btn btn-outline-primary mt-3">
                     إعدادات نقاط الفيديو
                 </a>
+                <a href="{{ route('admin.plans.index') }}" class="btn btn-outline-secondary mt-3 ms-2">
+                    إدارة الباقات
+                </a>
+                <a href="{{ route('admin.reports') }}" class="btn btn-outline-success mt-3 ms-2">
+                    التقارير الحية
+                </a>
             </div>
         </div>
     </div>

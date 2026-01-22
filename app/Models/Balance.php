@@ -12,11 +12,13 @@ class Balance extends Model
     protected $fillable = [
         'user_id',
         'amount',
+        'points',
         'currency',
     ];
 
     protected $casts = [
         'amount' => 'decimal:2',
+        'points' => 'integer',
     ];
 
     public function user()

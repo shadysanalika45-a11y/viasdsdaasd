@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Models\Balance;
 use App\Models\SiteSetting;
 use App\Models\Video;
 use Illuminate\Http\RedirectResponse;
@@ -43,6 +44,13 @@ class VideoController extends Controller
             'is_promoted' => $isPromoted,
             'points_awarded' => $pointsAwarded,
         ]);
+
+        $balance = Balance::firstOrCreate(
+            ['user_id' => $request->user()->id],
+            ['amount' => 0, 'points' => 0, 'currency' => 'USD']
+        );
+
+        $balance->increment('points', $pointsAwarded);
 
         return back()->with('status', 'تم رفع الفيديو ومنح النقاط بنجاح.');
     }

@@ -54,6 +54,7 @@
                                         <th>العنوان</th>
                                         <th>الرابط</th>
                                         <th>النقاط</th>
+                                        <th>التقييم</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -62,10 +63,11 @@
                                             <td>{{ $video->title }}</td>
                                             <td><a href="{{ $video->url }}" target="_blank">عرض</a></td>
                                             <td>{{ $video->points_awarded }}</td>
+                                            <td>{{ number_format($video->average_rating, 2) }}</td>
                                         </tr>
                                     @empty
                                         <tr>
-                                            <td colspan="3" class="text-center">لا توجد فيديوهات حتى الآن.</td>
+                                            <td colspan="4" class="text-center">لا توجد فيديوهات حتى الآن.</td>
                                         </tr>
                                     @endforelse
                                 </tbody>

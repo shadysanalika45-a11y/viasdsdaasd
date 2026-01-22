@@ -49,4 +49,28 @@ class AdminController extends Controller
 
         return back()->with('status', 'تم تحديث إعدادات النقاط بنجاح.');
     }
+
+    public function reports(): View
+    {
+        $balanceSummary = Transaction::selectRaw('DATE(created_at) as day, SUM(amount) as total')
+            ->where('type', 'credit')
+            ->groupBy('day')
+            ->orderBy('day')
+            ->take(14)
+            ->get();
+
+        $videoSummary = Video::selectRaw('DATE(created_at) as day, COUNT(*) as total')
+            ->groupBy('day')
+            ->orderBy('day')
+            ->take(14)
+            ->get();
+
+        return view('admin.reports', [
+            'balanceSummary' => $balanceSummary,
+            'videoSummary' => $videoSummary,
+            'totalBalance' => Transaction::where('type', 'credit')->sum('amount'),
+            'totalPoints' => Video::sum('points_awarded'),
+            'activeSubscriptions' => Subscription::where('status', 'active')->count(),
+        ]);
+    }
 }

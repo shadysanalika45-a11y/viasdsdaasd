@@ -45,6 +45,16 @@
                 </li>
             </ul>
             <ul class="navbar-nav align-items-md-center align-items-start">
+                <li class="nav-item dropdown me-2">
+                    <a class="nav-link dropdown-toggle" href="#" id="localeDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        {{ app()->getLocale() === 'en' ? 'EN' : 'AR' }}
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="localeDropdown">
+                        <li><a class="dropdown-item" href="{{ route('locale.switch', 'ar') }}">العربية</a></li>
+                        <li><a class="dropdown-item" href="{{ route('locale.switch', 'en') }}">English</a></li>
+                    </ul>
+                </li>
                 <li class="nav-item">
                     <a href="{{ route('login.form') }}" class="nav-link login">
                         <span class="fw-bold">تسجيل الدخول</span>

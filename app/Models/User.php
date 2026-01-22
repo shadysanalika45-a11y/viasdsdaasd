@@ -63,4 +63,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Video::class);
     }
+
+    public function apiTokens()
+    {
+        return $this->hasMany(ApiToken::class);
+    }
 }

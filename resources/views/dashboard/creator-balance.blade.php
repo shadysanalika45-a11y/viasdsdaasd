@@ -14,6 +14,7 @@
                     <div class="card-body">
                         <h5 class="card-title">الرصيد المتاح</h5>
                         <p class="display-6">{{ $balance?->amount ?? '0.00' }} {{ $balance?->currency ?? 'USD' }}</p>
+                        <p class="mb-1">النقاط الحالية: {{ $balance?->points ?? 0 }}</p>
                         <p class="text-muted">آخر تحديث: {{ $balance?->updated_at?->format('Y-m-d') ?? '-' }}</p>
                     </div>
                 </div>
@@ -53,6 +54,7 @@
                                         <th>المبلغ</th>
                                         <th>الحالة</th>
                                         <th>الوصف</th>
+                                        <th>التأكيد</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -62,10 +64,23 @@
                                             <td>{{ $transaction->amount }}</td>
                                             <td>{{ $transaction->status }}</td>
                                             <td>{{ $transaction->description }}</td>
+                                            <td>
+                                                @if ($transaction->verified_at)
+                                                    <span class="badge bg-success">تم التأكيد</span>
+                                                @elseif ($transaction->verification_code)
+                                                    <form method="POST" action="{{ route('creator.transactions.confirm', $transaction) }}" class="d-flex gap-2">
+                                                        @csrf
+                                                        <input type="text" name="verification_code" class="form-control form-control-sm" placeholder="رمز التحقق">
+                                                        <button type="submit" class="btn btn-sm btn-outline-primary">تأكيد</button>
+                                                    </form>
+                                                @else
+                                                    <span class="text-muted">غير متاح</span>
+                                                @endif
+                                            </td>
                                         </tr>
                                     @empty
                                         <tr>
-                                            <td colspan="4" class="text-center">لا توجد عمليات بعد.</td>
+                                            <td colspan="5" class="text-center">لا توجد عمليات بعد.</td>
                                         </tr>
                                     @endforelse
                                 </tbody>
