@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="48px" viewBox="0 0 80 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>wim2</title>
+    <defs>
+        <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#09D9D7" offset="0%"></stop>
+            <stop stop-color="#1CC6DC" stop-opacity="0" offset="99.9221482%"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="linearGradient-2">
+            <stop stop-color="#855CFF" offset="0%"></stop>
+            <stop stop-color="#855CFF" stop-opacity="0" offset="99.9259042%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="About" transform="translate(-563.000000, -1400.000000)">
+            <g id="Section---Our-way-of-working" transform="translate(80.000000, 1100.000000)">
+                <g id="wim2" transform="translate(483.000000, 300.000000)">
+                    <rect id="Bound" x="16" y="0" width="48" height="48"></rect>
+                    <rect id="Rectangle" fill="url(#linearGradient-1)" transform="translate(56.000000, 24.000000) scale(-1, 1) translate(-56.000000, -24.000000) " x="32" y="16" width="48" height="16" rx="8"></rect>
+                    <rect id="Rectangle" fill="url(#linearGradient-2)" style="mix-blend-mode: darken;" x="0" y="16" width="48" height="16" rx="8"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
