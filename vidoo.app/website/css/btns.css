@@ -1,0 +1,101 @@
+.main-btn {
+    background-color: var(--main-color);
+    display: flex;
+    width: 250px!important;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 26px;
+    /* margin-bottom: 24px; */
+    font-size: 18px;
+    font-style: normal;
+    line-height: 22px;
+    color: white;
+}
+
+.main-btn:hover {
+    color: white;
+
+}
+
+.sec-main-btn {
+    background-color: var(--main-color);
+    display: flex;
+    width: 200px;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    font-size: 18px;
+    font-style: normal;
+    line-height: 22px;
+    color: white;
+}
+
+.outline-btn{
+    border: 1px solid var(--main-color);
+    border-radius: 8px;
+    color: var(--main-color);
+    padding: 12px;
+    font-weight: 500;
+}
+.outline-btn:hover{
+    background-color: var(--main-color);
+    color: white;
+
+}
+.button-black {
+    display: flex;
+    width: 220px;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 999px;
+    background: black;
+    margin-top: 24px;
+    font-size: 18px;
+    font-style: normal;
+    line-height: 22px;
+    color: white;
+
+}
+
+
+.sec-button {
+    display: flex;
+    width: 200px;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 999px;
+    border: 1px solid #A7A7A7;
+    font-size: 18px;
+    font-style: normal;
+    line-height: 22px;
+
+    color: #2E2E2E;
+}
+
+.sec-button:hover {
+    color: var(--sec-color);
+    border-color: var(--sec-color);
+}
+.log-in-button {
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.24), 0px 1px 4px 0px rgba(0, 0, 0, 0.14);
+    padding: 8px 30px  !important;
+    background-color: var(--main-color);
+    color: #fff !important;
+    border-radius: 34px;
+}
+.dashboard-button
+{
+    display: contents;
+}
+.custom-btn-width{
+    width: fit-content !important;
+}

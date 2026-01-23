@@ -1,0 +1,228 @@
+.vidoo_brands{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: start;
+    justify-content: start;
+}
+.hero-media {
+    display: flex;
+    gap: 30px;
+}
+.hero-media video:nth-child(1) {
+    max-width: 263px;
+    height: auto;
+    margin-bottom: 30px;
+}
+.hero-media video:nth-child(2) {
+    max-width: 263px;
+    height: auto;
+    margin-top: 30px;
+}
+
+.slick-case-study img{
+    height: 120px !important;
+    /* width: 120px; */
+}
+.single-testimonial{
+    margin: 8px;
+}
+.testimonials-wrapper .testimonial {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.thumb-image.open-popup {
+    width: fit-content;
+    position: relative;
+}
+.thumb-image.open-popup::before {
+    content: url(../images/general/Play.svg);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.thumb-image.open-popup .image, .thumb-image.open-popup {
+    width: fit-content;
+    margin: auto;
+}
+.single-testimonial .image img {
+    width: fit-content;
+    height: 357px;
+    border-radius: 16px;
+    object-fit: cover;
+    cursor: pointer;
+}
+.image-description {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    font-size: 12px;
+    font-style: normal;
+    line-height: 14px;
+    color: #3D3D3D;
+    display: inline-flex;
+    padding: 4px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background: #F9F9F9;
+}
+.testimonials-wrapper .content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+.testimonial-container-div {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 16px;
+    border: 1px solid #E9E9E9;
+    background: #FFF;
+    min-height: 355px;
+    margin: 12px 0px;
+}
+
+.testimonial-name-div {
+    display: flex;
+    gap: 16px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /* margin-bottom: 16px; */
+}
+.testimonial-name-div .name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.testimonial-text-div {
+    border-top: 1px solid #E9E9E9;
+    padding-top: 16px;
+}
+.testimonial-text-div p {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    color: #3D3D3D;
+    margin-bottom: 0;
+}
+
+
+ .post-wrapper {
+    /* width: calc(50% - 13px); */
+    position: relative;
+}
+.post-link {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+}
+/* .post-image {
+    aspect-ratio: 3 / 1.7;
+    background: #f9f9f9;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 15px;
+} */
+ .post-image img {
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+    border-radius: 8px;
+}
+.industry {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+    color: #848484;
+    margin-bottom: 12px;
+    width: fit-content;
+}
+.content-title {
+    display: flex;
+    justify-content: space-between;
+    margin: 12px;
+    align-items: center;
+    align-content: center;
+}
+ .content-title .title {
+    font-size: 22px;
+    font-weight:bold;
+    line-height: 32px;
+    /* text-align: left; */
+    color: #2E2E2E;
+    margin-bottom: 0px;
+}
+ .platforms {
+    max-width: 135px;
+    min-width: 135px;
+}
+.content-title .case-platoforms {
+    display: flex;
+    gap: 5px;
+    justify-content: flex-end;
+}
+.content-title .platform {
+    background: #E6F5FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    border-radius: 12px;
+}
+
+.content-title .platform p {
+    color: #4A0EFB;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: left;
+    padding: 4px 8px;
+    margin-bottom: 0;
+}
+ .content-subtitle {
+    font-size: 18px;
+    line-height: 22px;
+    /* text-align: left; */
+    color: #2E2E2E;
+}
+.content-statistics {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin: 20px 0px;
+}
+.read-more a {
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    font-family: "GT Walsheim Pro Medium";
+    font-weight: 400;
+    text-decoration: underline;
+    color: #2E2E2E;
+}
+
+@media (max-width:600px){
+    .hero-media{
+        margin-top: 2rem;
+
+    }
+    .hero-media video:nth-child(1) {
+        max-width: 174px;
+    }
+    .hero-media video:nth-child(2) {
+        max-width: 174px;
+    }
+}

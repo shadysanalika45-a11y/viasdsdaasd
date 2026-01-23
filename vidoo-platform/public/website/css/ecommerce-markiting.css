@@ -1,0 +1,50 @@
+
+.fullwidth-video {
+    width: 100%;
+    position: relative;
+
+}
+
+
+.fullwidth-video video {
+    filter: brightness(0.3);
+    /* min-height: 100vh; */
+    min-height: 100vh !important;
+    min-width: 100vw ;
+
+}
+
+.fullwidth-video-content {
+    position: absolute;
+    top: 30%;
+    right: 30rem;
+    left: 30rem;
+    /* left: 50%; */
+    color: white;
+    text-align: center;
+}
+
+.slick-ecommerce img{
+    height: 120px !important;
+    /* width: 120px; */
+}
+@media(max-width:600px) {
+
+
+    .fullwidth-video-content {
+
+        right: 0rem !important;
+        left: 0rem !important;
+    }
+    .fullwidth-video video {
+        min-height: auto !important;
+        width: 100%;
+    }
+}
+
+@media (min-width:700px) and (max-width:1024px){
+    .fullwidth-video-content {
+        right: 10rem !important;
+        left: 10rem !important;
+    }
+}

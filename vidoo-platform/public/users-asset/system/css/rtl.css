@@ -1,0 +1,29 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+header,
+a,
+li,
+label,
+input,
+textarea,
+select,
+button {
+  font-family: 'Tajawal', sans-serif !important;
+}
+body {
+  font-family: 'Tajawal', sans-serif !important;
+}
+.invalid-feedback {
+  display: block !important;
+}
+/* .app-content,.content  {
+  margin-top: 80px!important;
+} */
+.horizontal-layout.navbar-floating .header-navbar-shadow{
+    height: 40px!important;
+}
