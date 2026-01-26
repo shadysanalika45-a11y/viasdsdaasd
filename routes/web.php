@@ -1,0 +1,103 @@
+<?php
+
+use App\Http\Controllers\Admin\CmsSectionController;
+use App\Http\Controllers\Admin\ManualPaymentController;
+use App\Http\Controllers\Admin\UserManagementController;
+use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\Dashboard\AdminDashboardController;
+use App\Http\Controllers\Dashboard\BuyerController;
+use App\Http\Controllers\Dashboard\CompanyController;
+use App\Http\Controllers\Dashboard\CreatorController;
+use App\Http\Controllers\Install\InstallController;
+use App\Http\Controllers\Pages\AgenciesController;
+use App\Http\Controllers\Pages\BrandsController;
+use App\Http\Controllers\Pages\ClientRegisterController;
+use App\Http\Controllers\Pages\ConditionsController;
+use App\Http\Controllers\Pages\ContactController;
+use App\Http\Controllers\Pages\CreatorRegisterController;
+use App\Http\Controllers\Pages\CreatorsController;
+use App\Http\Controllers\Pages\EcommerceController;
+use App\Http\Controllers\Pages\ForgetPasswordController;
+use App\Http\Controllers\Pages\HomeController;
+use App\Http\Controllers\Pages\LoginPageController;
+use App\Http\Controllers\Pages\PackagePolicyController;
+use App\Http\Controllers\Pages\PolicyController;
+use App\Http\Controllers\Pages\PricingController;
+use App\Http\Controllers\Pages\RefundController;
+use Illuminate\Support\Facades\Route;
+
+Route::middleware('install.check')->group(function () {
+    Route::get('/', [HomeController::class, 'index'])->name('home');
+    Route::get('/pricing', [PricingController::class, 'index'])->name('pricing');
+    Route::get('/creators', [CreatorsController::class, 'index'])->name('creators');
+    Route::get('/agencies', [AgenciesController::class, 'index'])->name('agencies');
+    Route::get('/brands', [BrandsController::class, 'index'])->name('brands');
+    Route::get('/ecommerce', [EcommerceController::class, 'index'])->name('ecommerce');
+    Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+    Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
+    Route::get('/conditions', [ConditionsController::class, 'index'])->name('conditions');
+    Route::get('/policy', [PolicyController::class, 'index'])->name('policy');
+    Route::get('/refund', [RefundController::class, 'index'])->name('refund');
+    Route::get('/package-policy', [PackagePolicyController::class, 'index'])->name('package.policy');
+    Route::get('/login', [LoginPageController::class, 'index'])->name('login.form');
+    Route::get('/forget-password', [ForgetPasswordController::class, 'index'])->name('password.request');
+    Route::post('/forget-password', [ForgetPasswordController::class, 'submit'])->name('password.email');
+    Route::get('/register', [ClientRegisterController::class, 'index'])->name('register.form');
+    Route::get('/creator/register', [CreatorRegisterController::class, 'index'])->name('creator.register');
+    Route::get('/client/register', [ClientRegisterController::class, 'index'])->name('client.register');
+    Route::post('/support/agencies', [AgenciesController::class, 'submit'])->name('agencies.submit');
+
+    Route::post('/login', [AuthController::class, 'login'])->name('login');
+    Route::post('/register', [AuthController::class, 'register'])->name('register');
+    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+    Route::middleware('auth')->group(function () {
+        Route::get('/profile', [AuthController::class, 'profile'])->name('profile');
+        Route::post('/profile', [AuthController::class, 'updateProfile'])->name('profile.update');
+
+        Route::middleware('role:buyer')->group(function () {
+            Route::get('/dashboard/buyer', [BuyerController::class, 'index'])->name('dashboard.buyer');
+        });
+
+        Route::middleware('role:company')->group(function () {
+            Route::get('/dashboard/company', [CompanyController::class, 'index'])->name('dashboard.company');
+        });
+
+        Route::middleware('role:creator')->group(function () {
+            Route::get('/dashboard/creator', [CreatorController::class, 'index'])->name('dashboard.creator');
+            Route::post('/dashboard/creator/intro-video', [CreatorController::class, 'storeIntroVideo'])
+                ->name('dashboard.creator.intro-video');
+            Route::post('/dashboard/creator/balance/deposit', [CreatorController::class, 'storeDeposit'])
+                ->name('dashboard.creator.balance.deposit');
+            Route::post('/dashboard/creator/balance/withdraw', [CreatorController::class, 'storeWithdrawal'])
+                ->name('dashboard.creator.balance.withdraw');
+            Route::post('/dashboard/creator/support', [CreatorController::class, 'storeSupportMessage'])
+                ->name('dashboard.creator.support');
+            Route::post('/dashboard/creator/orders/{order}/status', [CreatorController::class, 'updateOrderStatus'])
+                ->name('dashboard.creator.orders.status');
+        });
+
+        Route::middleware('role:admin')->prefix('admin')->name('admin.')->group(function () {
+            Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
+            Route::resource('cms-sections', CmsSectionController::class)->only(['index', 'edit', 'update']);
+            Route::get('manual-payments', [ManualPaymentController::class, 'index'])->name('manual-payments.index');
+            Route::post('manual-payments/{proof}/approve', [ManualPaymentController::class, 'approve'])->name('manual-payments.approve');
+            Route::post('manual-payments/{proof}/reject', [ManualPaymentController::class, 'reject'])->name('manual-payments.reject');
+            Route::resource('users', UserManagementController::class)->only(['index', 'edit', 'update']);
+        });
+    });
+});
+
+Route::prefix('install')->name('install.')->middleware('install.guard')->group(function () {
+    Route::get('/', [InstallController::class, 'requirements'])->name('requirements');
+    Route::post('/requirements', [InstallController::class, 'requirementsSubmit'])->name('requirements.submit');
+    Route::get('/database', [InstallController::class, 'database'])->name('database');
+    Route::post('/database', [InstallController::class, 'databaseSubmit'])->name('database.submit');
+    Route::get('/settings', [InstallController::class, 'settings'])->name('settings');
+    Route::post('/settings', [InstallController::class, 'settingsSubmit'])->name('settings.submit');
+    Route::get('/admin', [InstallController::class, 'admin'])->name('admin');
+    Route::post('/admin', [InstallController::class, 'adminSubmit'])->name('admin.submit');
+    Route::get('/migrate', [InstallController::class, 'migrate'])->name('migrate');
+    Route::post('/migrate', [InstallController::class, 'migrateSubmit'])->name('migrate.submit');
+    Route::get('/finish', [InstallController::class, 'finish'])->name('finish');
+});
