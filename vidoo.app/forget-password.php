@@ -1,3 +1,6 @@
+<?php
+declare(strict_types=1);
+?>
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="rtl">
 <!-- BEGIN: Head-->
@@ -93,7 +96,7 @@
                         <!-- Forgot Password basic -->
                         <div class="card mb-0">
                             <div class="card-body">
-                                <a href="index.html" class="brand-logo">
+                                <a href="index.php" class="brand-logo">
                                     <img src="users-asset/images/logo/logo-2.png" width="150px" alt="logo">
                                 </a>
 
@@ -101,7 +104,7 @@
                                 <p class="card-text mb-2">أدخل بريدك الإلكتروني وسنرسل لك تعليمات لإعادة تعيين كلمة المرور الخاصة بك </p>
 
                                 <form class="auth-forgot-password-form mt-2"
-                                    action="https://vidoo.app/forget-password" method="POST">
+                                    action="server/forget-password.php" method="POST">
                                     <input type="hidden" name="_token" value="p6U4weZ680MitaoiaLfJkptsRFKXRmXfkgEtpLev">                                    <div class="mb-1">
                                         <label for="forgot-password-email"
                                             class="form-label">البريد الإلكتروني</label>
@@ -113,7 +116,7 @@
                                 </form>
 
                                 <p class="text-center mt-2">
-                                    <a href="login.html"> <i
+                                    <a href="login.php"> <i
                                             data-feather="chevron-left"></i>رجوع لتسجيل الدخول </a>
                                 </p>
                             </div>

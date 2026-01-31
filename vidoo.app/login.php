@@ -1,3 +1,6 @@
+<?php
+declare(strict_types=1);
+?>
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="rtl">
 <!-- BEGIN: Head-->
@@ -100,13 +103,13 @@
                         <!-- Login basic -->
                         <div class="card mb-0">
                             <div class="card-body">
-                                <a href="index.html" class="brand-logo">
+                                <a href="index.php" class="brand-logo">
                                     <img src="users-asset/images/logo/logo-2.png" width="150px" alt="logo">
                                 </a>
                                 <h4 class="card-title mb-1">مرحبًا بعودتك إلى فيدوو! 👋</h4>
                                 <p class="card-text mb-2">سجّل دخولك للوصول إلى أدواتك المفضلة، متابعة مشاريعك، والتواصل مع صُناع المحتوى والعلامات التجارية. رحلتك الإبداعية تبدأ هنا!</p>
 
-                                <form class="auth-login-form mt-2" action="https://vidoo.app/login" method="POST">
+                                <form class="auth-login-form mt-2" action="server/login.php" method="POST">
                                     <input type="hidden" name="_token" value="p6U4weZ680MitaoiaLfJkptsRFKXRmXfkgEtpLev">                                    <div class="mb-1">
                                         <label for="login-email" class="form-label">البريد الإلكتروني</label>
                                         <input type="text" class="form-control" id="login-email" name="email"
@@ -118,7 +121,7 @@
                                         <div class="d-flex justify-content-between">
                                             <label class="form-label"
                                                 for="login-password">كلمة المرور</label>
-                                            <a href="forget-password.html">
+                                            <a href="forget-password.php">
                                                 <small>هل نسيت كلمة المرور؟</small>
                                             </a>
                                         </div>
@@ -146,7 +149,7 @@
                                     <span>جديد على منصتنا؟</span>
                                     
                                     
-                                    <a href="client/register.html">
+                                    <a href="client/register.php">
                                         <span> أنشئ حسابك الآن!</span>
                                     </a>
                                 </p>

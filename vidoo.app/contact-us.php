@@ -1,9 +1,12 @@
+<?php
+declare(strict_types=1);
+?>
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr"  dir="rtl" style="direction: rtl">
 <!-- BEGIN: Head-->
 
 
-<!-- Mirrored from vidoo.app/ecommerce by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 22 Nov 2025 12:14:53 GMT -->
+<!-- Mirrored from vidoo.app/contact-us by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 22 Nov 2025 12:15:03 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 
@@ -81,11 +84,11 @@
 <link rel="stylesheet" type="text/css" href="website/css/base.css">
 <link rel="stylesheet" type="text/css" href="website/css/style.css">
 <link rel="stylesheet" href="website/css/btns.css" />
+<link rel="stylesheet" href="website/css/for-agency.css" />
 
-<link rel="stylesheet" href="website/css/ecommerce-markiting.css" />
-<title>فيدوو للتجارة الإلكترونية - تعزيز مبيعاتك بمحتوى فيديو مميز</title>
-<meta name="description" content="تعرّف على كيفية استفادة علامتك التجارية من فيدوو لزيادة مبيعاتك عبر الإنترنت من خلال محتوى فيديو مخصص وجذاب يعزز تجربة عملائك في التسوق.">
-<meta name="keywords" content="تعرّف على كيفية استفادة علامتك التجارية من فيدوو لزيادة مبيعاتك عبر الإنترنت من خلال محتوى فيديو مخصص وجذاب يعزز تجربة عملائك في التسوق.">
+<title>تواصل معنا - فيدوو</title>
+<meta name="description" content="هل لديك أسئلة أو تعليقات؟ تواصل معنا عبر صفحة اتصل بنا في فيدوو، فريقنا هنا لدعمك والإجابة على استفساراتك.">
+<meta name="keywords" content="هل لديك أسئلة أو تعليقات؟ تواصل معنا عبر صفحة اتصل بنا في فيدوو، فريقنا هنا لدعمك والإجابة على استفساراتك.">
 
     
     <!-- Google Fonts -->
@@ -124,7 +127,7 @@
     <div class="container-fluid p-0 px-md-4 px-0">
         
 
-            <a class="navbar-brand ms-md-0 ms-2" href="index.html">
+            <a class="navbar-brand ms-md-0 ms-2" href="index.php">
                 <img src="users-asset/images/logo/arabic-logo.png" alt="logo"
                     class="vidoo_logo img-fluid" height="50" width="100">
             </a>
@@ -140,7 +143,7 @@
 
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link " aria-current="page" href="index.html">الصفحة الرئيسية</a>
+                    <a class="nav-link " aria-current="page" href="index.php">الصفحة الرئيسية</a>
                 </li>
 
                 
@@ -148,11 +151,11 @@
                 
                 <li class="nav-item">
                     <a class="nav-link  " aria-current="page"
-                        href="price.html">الأسعار</a>
+                        href="price.php">الأسعار</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link  " aria-current="page" href="creators.html">صُنّاع المحتوى</a>
+                    <a class="nav-link  " aria-current="page" href="creators.php">صُنّاع المحتوى</a>
                 </li>
 
                 <li class="nav-item dropdown">
@@ -165,15 +168,15 @@
                         </svg>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="ecommerce.html">التجارة الالكترونية</a></li>
-                        <li><a class="dropdown-item" href="agencies.html">الوكالات</a></li>
-                        <li><a class="dropdown-item" href="brands.html">العلامات التجارية</a></li>
+                        <li><a class="dropdown-item" href="ecommerce.php">التجارة الالكترونية</a></li>
+                        <li><a class="dropdown-item" href="agencies.php">الوكالات</a></li>
+                        <li><a class="dropdown-item" href="brands.php">العلامات التجارية</a></li>
                     </ul>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link  " aria-current="page"
-                        href="contact-us.html">تواصل معنا</a>
+                    <a class="nav-link active " aria-current="page"
+                        href="contact-us.php">تواصل معنا</a>
                 </li>
 
 
@@ -184,14 +187,14 @@
                                         
                     <li class="nav-item">
 
-                        <a href="login.html" class="nav-link  login">
+                        <a href="login.php" class="nav-link  login">
                             <span class="fw-bold">
                                 تسجيل الدخول
                             </span>
                         </a>
                     </li>
                                                             <li class="nav-item">
-                        <a type="button" href="login.html"
+                        <a type="button" href="login.php"
                             class="btn log-in-button my-md-0 my-2 " type="submit">
                             اطلب الان
                         </a>
@@ -209,153 +212,73 @@
 
 
         
-
-
-<section>
-
-    <div class="fullwidth-video">
-        <video preload="auto" autoplay="" playsinline="" loop="" muted="" class="">
-            <source src="website/images/ecommerce/By_Client_Type_eCom_MB_01.mp4" type="video/mp4">
-        </video>
-        <div class="fullwidth-video-content">
-
-            <h3>
-                فيدو - الحل الأمثل لإعلانات الفيديو للتجارة الإلكترونية
-            </h3>
-            <a type="button" href="login.html"
-                class="btn main-btn m-auto w-auto custom-btn-width">
-                اطلب الفديو الاول لتجارتك الالكترونية
-            </a>
-        </div>
-    </div>
-
-</section>
-
 <div class="container">
+    <div class="row">
 
-    <section class="my-4">
-        <div class="row align-items-center">
-            <div class="col-md-3">
-                
-                <p class="fw-bold"> العديد من المتاجر الإلكترونية يعتمد على فيدوو</p>
-            </div>
-            <div class="col-md-9">
 
-                <div class="slick-ecommerce" dir="ltr" style="direction: ltr;">
+    <h1 class="main-color-gradient">
+        ابق على تواصل مع فريق فيدوو
+    </h1>
 
-                    <div class="slide-content mx-2 img-fluid">
-                        <img src="website/images/brands/logo1.png" alt="" srcset="">
-                    </div>
-                    <div class="slide-content mx-2 img-fluid">
-                        <img src="website/images/brands/logo2.png" alt="" srcset="">
-                    </div>
-                    <div class="slide-content mx-2 img-fluid">
-                        <img src="website/images/brands/logo3.png" alt="" srcset="">
-                    </div>
-                    <div class="slide-content mx-2 img-fluid">
-                        <img src="website/images/brands/logo4.png" alt="" srcset="">
-                    </div>
-                    <div class="slide-content mx-2 img-fluid">
-                        <img src="website/images/brands/logo5.png" alt="" srcset="">
-                    </div>
-                    <div class="slide-content mx-2 img-fluid">
-                        <img src="website/images/brands/logo6.png" alt="" srcset="">
-                    </div>
-                    <div class="slide-content mx-2 img-fluid">
-                        <img src="website/images/brands/one-bond.png" alt="" srcset="">
-                    </div>
+    <section class="my-4 ">
+        <div>
 
-                </div>
-            </div>
-    </section>
-    <section class="my-4">
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <h1>
-                    إعلانات الفيديو لمتجرك الإلكتروني
-                </h1>
-                <p>
-                    انضم إلى شبكة فيدو لصُناع الفيديو والمحررين المعتمدين، الموثوق بهم من قبل أكثر من 20,000 علامة
-                    تجارية
-                    ووكالة تسويق.
-                    عروض حصرية للتجارة الإلكترونية
-                    أكثر من 7,000 متجر إلكتروني يعتمد على فيدو
+             <p>
+                يمكنكم الاتصال بنا على <a href="mailto:hello@vidoo.app" class="main-text">hello@vidoo.app</a> إذا كانت لديكم أي أسئلة أو تعليقات حول منصة فيدوو. سيتم الرد عليكم خلال 24 ساعة.
+             </p>
 
-                    إعلانات فيديو فعالة من حيث التكلفة
-                    تتساءل لماذا خدماتنا في إنتاج الفيديو ميسورة التكلفة بشكل كبير؟ نحن نتخطى الوسطاء ونقدم لك محتوى
-                    فعال بسرع
-
-                </p>
-            </div>
-            <div class="col-md-6">
-                <img src="website/images/vidoo-map.png" alt="" srcset="" class="img-fluid">
-            </div>
         </div>
+
+        <div class="agency-form">
+
+            <p>او يمكنكم ترك البريد الالكتروني الخاص بكم واستفساركم وفريق الدعم سوف يتواصل معكم في اقرب وقت</p>
+
+            <form method="POST" action="server/support.php">
+            <div class="row">
+                <input type="hidden" name="_token" value="p6U4weZ680MitaoiaLfJkptsRFKXRmXfkgEtpLev">
+                <div class="col-md-6 my-2">
+
+
+
+                    <label class="fw-bold mb-2">الاسم</label>
+                    <input type="text" class="form-control agency-form-input" name="name" value="" placeholder="الاسم*">
+                                    </div>
+                <div class="col-md-6 my-2">
+
+                    <label class="fw-bold mb-2">الموقع الإلكتروني (اختياري)</label>
+
+                    <input type="text" class="form-control agency-form-input" name="url" value="" placeholder="الموقع الإلكتروني ">
+                                    </div>
+                <div class="col-md-6 my-2">
+
+                    <label class="fw-bold mb-2">عنوان البريد الإلكتروني</label>
+                    <input type="email" class="form-control agency-form-input" name="email" value="" placeholder="بريدك الإلكتروني*" required>
+                                    </div>
+                <div class="col-md-6 my-2">
+
+                    <label class="fw-bold mb-2">رقم الجوال</label>
+                    <input type="text" class="form-control agency-form-input" name="phone" value="" placeholder="رقم الجوال*">
+                                    </div>
+
+                <div class="col-md-12 my-2">
+
+                    <label class="fw-bold mb-2">كيف يمكننا مساعدك؟</label>
+
+                    <textarea rows="5" class="form-control agency-form-input" name="message" placeholder="اكتب رسالتك">
+                        
+                    </textarea>
+
+                                    </div>
+
+
+            </div>
+            <button class="btn main-btn mt-4">إرسال</button>
+        </div>
+
+
     </section>
+    </div>
 </div>
-<section class="my-4">
-
-    <div class="bg-light p-5">
-        <h1 class="text-center">
-            لماذا تختار فيدو لإعلانات الفيديو؟
-        </h1>
-
-    </div>
-    <div class="row justify-content-center">
-        <div class="col-md-3 d-grid gap-4">
-            <div class="p-xl-5 p-md-1 p-3">
-
-                <img decoding="async" title="wim3" src="website/images/ecommerce/wim3.svg"
-                    data-orig-src="website/images/ecommerce/wim3.svg"
-                    class="img-responsive wp-image-11009 img-with-aspect-ratio ls-is-cached lazyloaded"
-                    alt="eCommerce marketing">
-
-                <p class="fw-bold">إعلانات فيديو ميسورة التكلفة</p>
-                <p>
-                    نقدم برامج شراكة حصرية وأكبر الخصومات الممكنة
-                    للمتاجر الإلكترونية لضمان حصول عملائك على أفضل قيمة مقابل المال.
-                </p>
-            </div>
-        </div>
-
-        <div class="col-md-3 d-grid gap-4">
-            <div class="p-xl-5 p-md-1 p-3">
-                <img decoding="async" title="wim3" src="website/images/ecommerce/wim1.svg"
-                    data-orig-src="website/images/ecommerce/wim1.svg"
-                    class="img-responsive wp-image-11009 img-with-aspect-ratio ls-is-cached lazyloaded"
-                    alt="eCommerce marketing">
-
-                <p class="fw-bold">
-                    سهولة إنشاء المحتوى
-                </p>
-                <p>
-                    وفر الوقت والجهد مع مدير مخصص من فيدو، الذي سيتولى جميع الأعمال العملية لإعداد
-                    الفيديوهات لعملائك، مما يمنحك الحرية للتركيز على استراتيجية النمو.
-                </p>
-            </div>
-        </div>
-        <div class="col-md-3 d-grid gap-4">
-            <div class="p-xl-5 p-md-1 p-3">
-                <img decoding="async" title="wim3" src="website/images/ecommerce/wim2.svg"
-                    data-orig-src="website/images/ecommerce/wim2.svg"
-                    class="img-responsive wp-image-11009 img-with-aspect-ratio ls-is-cached lazyloaded"
-                    alt="eCommerce marketing">
-
-                <p class="fw-bold">
-                    مبدعون معتمدون فقط
-                </p>
-                <p>
-                    لا داعي للبحث المستمر عن المؤثرين!
-                    نحن نوفر لك مجموعة مختارة من المبدعين
-                    المعتمدين الذين يمكنهم بدء العمل على مشاريعك فورًا.
-
-
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
 
 
         <!-- BEGIN: Footer-->
@@ -367,13 +290,13 @@
         <div class="footer-column">
             <h4>روابط سريعة</h4>
             <ul>
-                <li><a href="index.html">الصفحة الرئيسية</a></li>
-                <li><a href="ecommerce.html">التجارة الالكترونية</a></li>
-                <li><a href="agencies.html">الوكالات</a></li>
-                <li><a href="brands.html">العلامات التجارية</a></li>
+                <li><a href="index.php">الصفحة الرئيسية</a></li>
+                <li><a href="ecommerce.php">التجارة الالكترونية</a></li>
+                <li><a href="agencies.php">الوكالات</a></li>
+                <li><a href="brands.php">العلامات التجارية</a></li>
                 
-                <li><a href="price.html">الأسعار</a></li>
-                <li><a href="creator/register.html">إنضم لمبدعي فيدوو</a></li>
+                <li><a href="price.php">الأسعار</a></li>
+                <li><a href="creator/register.php">إنضم لمبدعي فيدوو</a></li>
 
             </ul>
         </div>
@@ -394,10 +317,10 @@
         <div class="footer-column">
             <h4>السياسات والتعليمات</h4>
             <ul>
-                <li><a href="conditions.html">شروط الخدمة</a></li>
-                <li><a href="policy.html">سياسة الخصوصية</a></li>
-                <li><a href="refund.html">سياسة استرداد الامول</a></li>
-                <li><a href="package-policy.html">سياسة انتهاء صلاحية الِحزم</a></li>
+                <li><a href="conditions.php">شروط الخدمة</a></li>
+                <li><a href="policy.php">سياسة الخصوصية</a></li>
+                <li><a href="refund.php">سياسة استرداد الامول</a></li>
+                <li><a href="package-policy.php">سياسة انتهاء صلاحية الِحزم</a></li>
                 <li><a href="https://blog.vidoo.app/">المدونة</a></li>
                 
             </ul>
@@ -485,46 +408,52 @@
     $(document).ready(function () {
 
 
-    $().ready(function () {
-        tt = $('.slick-ecommerce').slick({
-            // arrows: true,
-            loop:true,
-            centerPadding: "150px",
-            infinite: true,
+      $(document).ready(function () {
 
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 2000,
-            arrows: false,
-            // centerMode: true,
-            // focusOnSelect: true,
-            // activeOnSelect:true
 
-              responsive: [
+$().ready(function () {
+    $('.slick-case-study').slick({
+        // arrows: true,
+        loop: true,
+        centerPadding: "150px",
+        infinite: true,
 
-                {
-                  breakpoint: 600,
-                  settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        arrows: false,
+        // centerMode: true,
+        // focusOnSelect: true,
+        // activeOnSelect:true
+
+        responsive: [
+
+            {
+                breakpoint: 600,
+                settings: {
                     slidesToShow: 4,
                     slidesToScroll: 1,
                     infinite: true,
-                  }
-                },
-                {
-                  breakpoint: 480,
-                  settings: {
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
                     infinite: true,
 
 
-                  }
                 }
+            }
 
-              ]
-        });
+        ]
     });
+});
+
+
+});
 
 
     });
@@ -535,5 +464,5 @@
     <!-- END: Body-->
 
 
-<!-- Mirrored from vidoo.app/ecommerce by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 22 Nov 2025 12:14:57 GMT -->
+<!-- Mirrored from vidoo.app/contact-us by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 22 Nov 2025 12:15:03 GMT -->
 </html>

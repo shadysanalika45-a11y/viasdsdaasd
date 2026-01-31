@@ -1,9 +1,12 @@
+<?php
+declare(strict_types=1);
+?>
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr"  dir="rtl" style="direction: rtl">
 <!-- BEGIN: Head-->
 
 
-<!-- Mirrored from vidoo.app/policy by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 22 Nov 2025 12:15:12 GMT -->
+<!-- Mirrored from vidoo.app/ecommerce by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 22 Nov 2025 12:14:53 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 
@@ -71,19 +74,21 @@
 <link href="website/lib/font/Messiri.css" rel="stylesheet">
 
     
-<link rel="stylesheet" href="../cdn.jsdelivr.net/npm/swiper%4010/swiper-bundle.min.css" />
-<script src="../cdn.jsdelivr.net/npm/swiper%4010/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="website/lib/swiper/swiper-bundle.min.css" />
+<script src="website/lib/swiper/swiper-bundle.min.js"></script>
 
-<link rel="stylesheet" type="text/css" href="../cdn.jsdelivr.net/gh/kenwheeler/slick%401.8.1/slick/slick.css" />
-<link rel="stylesheet" type="text/css" href="../cdn.jsdelivr.net/gh/kenwheeler/slick%401.8.1/slick/slick-theme.css" />
-<link rel="stylesheet" type="text/css" href="../kenwheeler.github.io/slick/slick/slick-theme.css" />
+<link rel="stylesheet" type="text/css" href="website/lib/slick/slick.css" />
+<link rel="stylesheet" type="text/css" href="website/lib/slick/slick-theme.css" />
+<link rel="stylesheet" type="text/css" href="website/lib/slick/github-slick-theme.css" />
 
 <link rel="stylesheet" type="text/css" href="website/css/base.css">
 <link rel="stylesheet" type="text/css" href="website/css/style.css">
 <link rel="stylesheet" href="website/css/btns.css" />
-<link rel="stylesheet" href="website/css/policy.css" />
 
-
+<link rel="stylesheet" href="website/css/ecommerce-markiting.css" />
+<title>فيدوو للتجارة الإلكترونية - تعزيز مبيعاتك بمحتوى فيديو مميز</title>
+<meta name="description" content="تعرّف على كيفية استفادة علامتك التجارية من فيدوو لزيادة مبيعاتك عبر الإنترنت من خلال محتوى فيديو مخصص وجذاب يعزز تجربة عملائك في التسوق.">
+<meta name="keywords" content="تعرّف على كيفية استفادة علامتك التجارية من فيدوو لزيادة مبيعاتك عبر الإنترنت من خلال محتوى فيديو مخصص وجذاب يعزز تجربة عملائك في التسوق.">
 
     
     <!-- Google Fonts -->
@@ -122,7 +127,7 @@
     <div class="container-fluid p-0 px-md-4 px-0">
         
 
-            <a class="navbar-brand ms-md-0 ms-2" href="index.html">
+            <a class="navbar-brand ms-md-0 ms-2" href="index.php">
                 <img src="users-asset/images/logo/arabic-logo.png" alt="logo"
                     class="vidoo_logo img-fluid" height="50" width="100">
             </a>
@@ -138,7 +143,7 @@
 
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link " aria-current="page" href="index.html">الصفحة الرئيسية</a>
+                    <a class="nav-link " aria-current="page" href="index.php">الصفحة الرئيسية</a>
                 </li>
 
                 
@@ -146,11 +151,11 @@
                 
                 <li class="nav-item">
                     <a class="nav-link  " aria-current="page"
-                        href="price.html">الأسعار</a>
+                        href="price.php">الأسعار</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link  " aria-current="page" href="creators.html">صُنّاع المحتوى</a>
+                    <a class="nav-link  " aria-current="page" href="creators.php">صُنّاع المحتوى</a>
                 </li>
 
                 <li class="nav-item dropdown">
@@ -163,15 +168,15 @@
                         </svg>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="ecommerce.html">التجارة الالكترونية</a></li>
-                        <li><a class="dropdown-item" href="agencies.html">الوكالات</a></li>
-                        <li><a class="dropdown-item" href="brands.html">العلامات التجارية</a></li>
+                        <li><a class="dropdown-item" href="ecommerce.php">التجارة الالكترونية</a></li>
+                        <li><a class="dropdown-item" href="agencies.php">الوكالات</a></li>
+                        <li><a class="dropdown-item" href="brands.php">العلامات التجارية</a></li>
                     </ul>
                 </li>
 
                 <li class="nav-item">
                     <a class="nav-link  " aria-current="page"
-                        href="contact-us.html">تواصل معنا</a>
+                        href="contact-us.php">تواصل معنا</a>
                 </li>
 
 
@@ -182,14 +187,14 @@
                                         
                     <li class="nav-item">
 
-                        <a href="login.html" class="nav-link  login">
+                        <a href="login.php" class="nav-link  login">
                             <span class="fw-bold">
                                 تسجيل الدخول
                             </span>
                         </a>
                     </li>
                                                             <li class="nav-item">
-                        <a type="button" href="login.html"
+                        <a type="button" href="login.php"
                             class="btn log-in-button my-md-0 my-2 " type="submit">
                             اطلب الان
                         </a>
@@ -209,92 +214,151 @@
         
 
 
+<section>
+
+    <div class="fullwidth-video">
+        <video preload="auto" autoplay="" playsinline="" loop="" muted="" class="">
+            <source src="website/images/ecommerce/By_Client_Type_eCom_MB_01.mp4" type="video/mp4">
+        </video>
+        <div class="fullwidth-video-content">
+
+            <h3>
+                فيدو - الحل الأمثل لإعلانات الفيديو للتجارة الإلكترونية
+            </h3>
+            <a type="button" href="login.php"
+                class="btn main-btn m-auto w-auto custom-btn-width">
+                اطلب الفديو الاول لتجارتك الالكترونية
+            </a>
+        </div>
+    </div>
+
+</section>
+
 <div class="container">
 
-    <div class="section-gap">
+    <section class="my-4">
+        <div class="row align-items-center">
+            <div class="col-md-3">
+                
+                <p class="fw-bold"> العديد من المتاجر الإلكترونية يعتمد على فيدوو</p>
+            </div>
+            <div class="col-md-9">
 
-        <h1 class="main-color-gradient">سياسة الخصوصية</h1>
-        <p class="fw-bold">مرحباً بكم في فيدو!</p>
-        <p>نُقدّر خصوصيتكم ونلتزم بحمايتها. هذه سياسة الخصوصية تُوضح كيفية جمعنا واستخدامنا وحماية معلوماتكم الشخصية عند
-            استخدامكم منصة فيدوو.</p>
-    </div>
+                <div class="slick-ecommerce" dir="ltr" style="direction: ltr;">
 
-    <div class="section-gap">
+                    <div class="slide-content mx-2 img-fluid">
+                        <img src="website/images/brands/logo1.png" alt="" srcset="">
+                    </div>
+                    <div class="slide-content mx-2 img-fluid">
+                        <img src="website/images/brands/logo2.png" alt="" srcset="">
+                    </div>
+                    <div class="slide-content mx-2 img-fluid">
+                        <img src="website/images/brands/logo3.png" alt="" srcset="">
+                    </div>
+                    <div class="slide-content mx-2 img-fluid">
+                        <img src="website/images/brands/logo4.png" alt="" srcset="">
+                    </div>
+                    <div class="slide-content mx-2 img-fluid">
+                        <img src="website/images/brands/logo5.png" alt="" srcset="">
+                    </div>
+                    <div class="slide-content mx-2 img-fluid">
+                        <img src="website/images/brands/logo6.png" alt="" srcset="">
+                    </div>
+                    <div class="slide-content mx-2 img-fluid">
+                        <img src="website/images/brands/one-bond.png" alt="" srcset="">
+                    </div>
 
-        <h3 class="sub-color-gradient">ما هي المعلومات التي نجمعها؟</h3>
-        <p>نحن نجمع المعلومات الشخصية الأساسية التي تُقدمها لنا عند إنشاء حساب على فيدو، مثل:</p>
-        <ul class="policy-ul">
-            <li><span class="fw-bold">اسم المستخدم:</span> اسم المستخدم الذي تختاره للظهور على المنصة.</li>
-            <li><span class="fw-bold">البريد الإلكتروني:</span> عنوان البريد الإلكتروني الخاص بك.</li>
-            <li><span class="fw-bold">كلمة المرور:</span> كلمة المرور التي تختارها لحماية حسابك.</li>
-            <li><span class="fw-bold">معلومات التعريف:</span> قد نطلب منك تقديم معلومات إضافية، مثل اسمك الكامل، رقم
-                الهاتف، ومعلومات الاتصال.</li>
-        </ul>
-        <p>نحن نجمع أيضًا معلومات استخدام المنصة مثل:</p>
-        <ul class="policy-ul">
-            <li><span>تاريخ ووقت استخدام المنصة:</span> نُسجل متى وأين تستخدم منصة فيدوو.</li>
-            <li><span>الأنشطة داخل المنصة:</span> نُسجل ما هي المحتوىات التي تتصفحها أو تتفاعل معها.</li>
-            <li><span>معلومات الجهاز:</span> نُسجل نوع الجهاز الذي تستخدمه وإصدار نظام التشغيل.</li>
-        </ul>
-    </div>
+                </div>
+            </div>
+    </section>
+    <section class="my-4">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h1>
+                    إعلانات الفيديو لمتجرك الإلكتروني
+                </h1>
+                <p>
+                    انضم إلى شبكة فيدو لصُناع الفيديو والمحررين المعتمدين، الموثوق بهم من قبل أكثر من 20,000 علامة
+                    تجارية
+                    ووكالة تسويق.
+                    عروض حصرية للتجارة الإلكترونية
+                    أكثر من 7,000 متجر إلكتروني يعتمد على فيدو
 
-    <div class="section-gap">
-        <h3 class="sub-color-gradient">كيف نستخدم المعلومات التي نجمعها؟</h3>
-        <p>نُستخدم المعلومات التي نُجمعها لأهداف محددة مثل:</p>
-        <ul class="policy-ul">
-            <li><span class="fw-bold">تقديم خدمة أفضل:</span> لضمان عمل المنصة بكفاءة وتقديم تجربة مستخدم مُحسّنة.</li>
-            <li><span class="fw-bold">تخصيص المحتوى:</span> عرض المحتوى المناسب لك والمُلائم لإهتماماتك.</li>
-            <li><span class="fw-bold">اتصالات مهمة:</span> إرسال إشعارات ورسائل هامّة تُخصّصك مثل التحديثات والعروض
-                الخاصة.</li>
-            <li><span class="fw-bold">التحليل والتطوير:</span> فهم كيف يستخدم المستخدمون المنصة وتحسين الأداء وإضافة
-                ميزات جديدة.</li>
-        </ul>
+                    إعلانات فيديو فعالة من حيث التكلفة
+                    تتساءل لماذا خدماتنا في إنتاج الفيديو ميسورة التكلفة بشكل كبير؟ نحن نتخطى الوسطاء ونقدم لك محتوى
+                    فعال بسرع
 
-    </div>
-
-    <div class="section-gap">
-
-        <h3 class="sub-color-gradient">مشاركة المعلومات:</h3>
-        <p>نحن لا نُشارك معلوماتك الشخصية مع أطراف ثالثة لأغراض تسويقية. نُشارك هذه المعلومات فقط مع الجهة التي نستخدم
-            خدمات سحابة البيانات منها وهي شركة [ذكر اسم شركة الخدمات السحابية] لضمان أمن وحماية بياناتك.</p>
-    </div>
-
-    <div class="section-gap">
-
-        <h3 class="sub-color-gradient">حماية المعلومات:</h3>
-        <p>نستخدم تدابير أمنية متطورة لحماية معلوماتك الشخصية من الوصول غير المُرخص له والاستخدام الخاطئ والتغييرات
-            والضياع والتدمير.</p>
-    </div>
-
-    <div class="section-gap">
-
-        <h3 class="sub-color-gradient">حقوقك:</h3>
-        <p>تُمنحك سياسة الخصوصية حقوق مُحدّدة فيما يتعلق بمعلوماتك الشخصية:</p>
-        <ul class="policy-ul">
-            <li><span class="fw-bold">حق الوصول:</span> حق معرفة ما هي المعلومات التي نُخزنها عنك.</li>
-            <li><span class="fw-bold">حق التعديل:</span> حق تعديل أو تصحيح أي معلومات غير دقيقة عنك.</li>
-            <li><span class="fw-bold">حق الحذف:</span> حق حذف معلوماتك الشخصية من قاعدة بياناتنا.</li>
-            <li><span class="fw-bold">حق الرفض:</span> حق الرفض من استخدام معلوماتك الشخصية لأغراض تسويقية.</li>
-        </ul>
-    </div>
-
-    <div class="section-gap">
-
-        <h3 class="sub-color-gradient">تواصل معنا:</h3>
-        <p>يمكنكم الاتصال بنا على <a href="mailto:hello@vidoo.app" class="main-text">hello@vidoo.app</a> إذا كانت لديكم
-            أي أسئلة أو تعليقات حول سياسة الخصوصية هذه.</p>
-    </div>
-
-    <div class="section-gap">
-        <h3 class="sub-color-gradient">التغييرات على سياسة الخصوصية:</h3>
-        <p>نحتفظ بحق تعديل هذه سياسة الخصوصية في أي وقت. سوف نُنشر أي تغييرات على المنصة ونُوصي بمراجعة هذه السياسة
-            بانتظام. استمرار استخدامكم للمنصة بعد نشر أي تغييرات سوف يشكل اعترافًا بقبولكم للتغييرات.</p>
-
-    </div>
-
-    <br><br>
-    <p class="fw-bold">شكرًا لكم على ثقتكم بنا!</p>
+                </p>
+            </div>
+            <div class="col-md-6">
+                <img src="website/images/vidoo-map.png" alt="" srcset="" class="img-fluid">
+            </div>
+        </div>
+    </section>
 </div>
+<section class="my-4">
+
+    <div class="bg-light p-5">
+        <h1 class="text-center">
+            لماذا تختار فيدو لإعلانات الفيديو؟
+        </h1>
+
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-3 d-grid gap-4">
+            <div class="p-xl-5 p-md-1 p-3">
+
+                <img decoding="async" title="wim3" src="website/images/ecommerce/wim3.svg"
+                    data-orig-src="website/images/ecommerce/wim3.svg"
+                    class="img-responsive wp-image-11009 img-with-aspect-ratio ls-is-cached lazyloaded"
+                    alt="eCommerce marketing">
+
+                <p class="fw-bold">إعلانات فيديو ميسورة التكلفة</p>
+                <p>
+                    نقدم برامج شراكة حصرية وأكبر الخصومات الممكنة
+                    للمتاجر الإلكترونية لضمان حصول عملائك على أفضل قيمة مقابل المال.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-3 d-grid gap-4">
+            <div class="p-xl-5 p-md-1 p-3">
+                <img decoding="async" title="wim3" src="website/images/ecommerce/wim1.svg"
+                    data-orig-src="website/images/ecommerce/wim1.svg"
+                    class="img-responsive wp-image-11009 img-with-aspect-ratio ls-is-cached lazyloaded"
+                    alt="eCommerce marketing">
+
+                <p class="fw-bold">
+                    سهولة إنشاء المحتوى
+                </p>
+                <p>
+                    وفر الوقت والجهد مع مدير مخصص من فيدو، الذي سيتولى جميع الأعمال العملية لإعداد
+                    الفيديوهات لعملائك، مما يمنحك الحرية للتركيز على استراتيجية النمو.
+                </p>
+            </div>
+        </div>
+        <div class="col-md-3 d-grid gap-4">
+            <div class="p-xl-5 p-md-1 p-3">
+                <img decoding="async" title="wim3" src="website/images/ecommerce/wim2.svg"
+                    data-orig-src="website/images/ecommerce/wim2.svg"
+                    class="img-responsive wp-image-11009 img-with-aspect-ratio ls-is-cached lazyloaded"
+                    alt="eCommerce marketing">
+
+                <p class="fw-bold">
+                    مبدعون معتمدون فقط
+                </p>
+                <p>
+                    لا داعي للبحث المستمر عن المؤثرين!
+                    نحن نوفر لك مجموعة مختارة من المبدعين
+                    المعتمدين الذين يمكنهم بدء العمل على مشاريعك فورًا.
+
+
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 
         <!-- BEGIN: Footer-->
@@ -306,13 +370,13 @@
         <div class="footer-column">
             <h4>روابط سريعة</h4>
             <ul>
-                <li><a href="index.html">الصفحة الرئيسية</a></li>
-                <li><a href="ecommerce.html">التجارة الالكترونية</a></li>
-                <li><a href="agencies.html">الوكالات</a></li>
-                <li><a href="brands.html">العلامات التجارية</a></li>
+                <li><a href="index.php">الصفحة الرئيسية</a></li>
+                <li><a href="ecommerce.php">التجارة الالكترونية</a></li>
+                <li><a href="agencies.php">الوكالات</a></li>
+                <li><a href="brands.php">العلامات التجارية</a></li>
                 
-                <li><a href="price.html">الأسعار</a></li>
-                <li><a href="creator/register.html">إنضم لمبدعي فيدوو</a></li>
+                <li><a href="price.php">الأسعار</a></li>
+                <li><a href="creator/register.php">إنضم لمبدعي فيدوو</a></li>
 
             </ul>
         </div>
@@ -333,10 +397,10 @@
         <div class="footer-column">
             <h4>السياسات والتعليمات</h4>
             <ul>
-                <li><a href="conditions.html">شروط الخدمة</a></li>
-                <li><a href="policy.html">سياسة الخصوصية</a></li>
-                <li><a href="refund.html">سياسة استرداد الامول</a></li>
-                <li><a href="package-policy.html">سياسة انتهاء صلاحية الِحزم</a></li>
+                <li><a href="conditions.php">شروط الخدمة</a></li>
+                <li><a href="policy.php">سياسة الخصوصية</a></li>
+                <li><a href="refund.php">سياسة استرداد الامول</a></li>
+                <li><a href="package-policy.php">سياسة انتهاء صلاحية الِحزم</a></li>
                 <li><a href="https://blog.vidoo.app/">المدونة</a></li>
                 
             </ul>
@@ -416,61 +480,54 @@
 <script type="text/javascript" src="website/lib/jquery/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="website/lib/jquery/jquery-migrate-1.2.1.min.js"></script>
 
+
 <script src="website/lib/slick/slick.min.js"></script>
 <script src="website/lib/slick/slick-carousel.min.js"></script>
 <script type="text/javascript" src="website/lib/slick/kenwheeler-slick.min.js"></script>
-
-
 <script>
     $(document).ready(function () {
 
 
-      $(document).ready(function () {
+    $().ready(function () {
+        tt = $('.slick-ecommerce').slick({
+            // arrows: true,
+            loop:true,
+            centerPadding: "150px",
+            infinite: true,
 
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            arrows: false,
+            // centerMode: true,
+            // focusOnSelect: true,
+            // activeOnSelect:true
 
-$().ready(function () {
-    $('.slick-case-study').slick({
-        // arrows: true,
-        loop: true,
-        centerPadding: "150px",
-        infinite: true,
+              responsive: [
 
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        arrows: false,
-        // centerMode: true,
-        // focusOnSelect: true,
-        // activeOnSelect:true
-
-        responsive: [
-
-            {
-                breakpoint: 600,
-                settings: {
+                {
+                  breakpoint: 600,
+                  settings: {
                     slidesToShow: 4,
                     slidesToScroll: 1,
                     infinite: true,
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
+                  }
+                },
+                {
+                  breakpoint: 480,
+                  settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
                     infinite: true,
 
 
+                  }
                 }
-            }
 
-        ]
+              ]
+        });
     });
-});
-
-
-});
 
 
     });
@@ -481,5 +538,5 @@ $().ready(function () {
     <!-- END: Body-->
 
 
-<!-- Mirrored from vidoo.app/policy by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 22 Nov 2025 12:15:16 GMT -->
+<!-- Mirrored from vidoo.app/ecommerce by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 22 Nov 2025 12:14:57 GMT -->
 </html>

@@ -1,3 +1,6 @@
+<?php
+declare(strict_types=1);
+?>
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr"  dir="rtl" style="direction: rtl">
 <!-- BEGIN: Head-->
@@ -126,7 +129,7 @@
     <div class="container-fluid p-0 px-md-4 px-0">
         
 
-            <a class="navbar-brand ms-md-0 ms-2" href="index.html">
+            <a class="navbar-brand ms-md-0 ms-2" href="index.php">
                 <img src="users-asset/images/logo/arabic-logo.png" alt="logo"
                     class="vidoo_logo img-fluid" height="50" width="100">
             </a>
@@ -142,7 +145,7 @@
 
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link " aria-current="page" href="index.html">الصفحة الرئيسية</a>
+                    <a class="nav-link " aria-current="page" href="index.php">الصفحة الرئيسية</a>
                 </li>
 
                 
@@ -150,11 +153,11 @@
                 
                 <li class="nav-item">
                     <a class="nav-link  " aria-current="page"
-                        href="price.html">الأسعار</a>
+                        href="price.php">الأسعار</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link  " aria-current="page" href="creators.html">صُنّاع المحتوى</a>
+                    <a class="nav-link  " aria-current="page" href="creators.php">صُنّاع المحتوى</a>
                 </li>
 
                 <li class="nav-item dropdown">
@@ -167,15 +170,15 @@
                         </svg>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="ecommerce.html">التجارة الالكترونية</a></li>
-                        <li><a class="dropdown-item" href="agencies.html">الوكالات</a></li>
-                        <li><a class="dropdown-item" href="brands.html">العلامات التجارية</a></li>
+                        <li><a class="dropdown-item" href="ecommerce.php">التجارة الالكترونية</a></li>
+                        <li><a class="dropdown-item" href="agencies.php">الوكالات</a></li>
+                        <li><a class="dropdown-item" href="brands.php">العلامات التجارية</a></li>
                     </ul>
                 </li>
 
                 <li class="nav-item">
                     <a class="nav-link  " aria-current="page"
-                        href="contact-us.html">تواصل معنا</a>
+                        href="contact-us.php">تواصل معنا</a>
                 </li>
 
 
@@ -186,14 +189,14 @@
                                         
                     <li class="nav-item">
 
-                        <a href="login.html" class="nav-link  login">
+                        <a href="login.php" class="nav-link  login">
                             <span class="fw-bold">
                                 تسجيل الدخول
                             </span>
                         </a>
                     </li>
                                                             <li class="nav-item">
-                        <a type="button" href="login.html"
+                        <a type="button" href="login.php"
                             class="btn log-in-button my-md-0 my-2 " type="submit">
                             اطلب الان
                         </a>
@@ -227,7 +230,7 @@
                         أكثر من 20 علامة تجارية من توسيع نطاق حملاتها التسويقية بنجاح.
                         نحن هنا لدعمك في تحقيق أهدافك التسويقية بأفضل الطرق الممكنة</p>
 
-                    <a type="button" href="price.html" class="btn sec-button w-auto">استكشف العروض</a>
+                    <a type="button" href="price.php" class="btn sec-button w-auto">استكشف العروض</a>
 
                 </div>
             </div>
@@ -389,7 +392,7 @@
             </div>
         </div>
 
-        <a type="button" href="login.html" class="btn main-btn m-auto mt-3">جرب فيدوو الان </a>
+        <a type="button" href="login.php" class="btn main-btn m-auto mt-3">جرب فيدوو الان </a>
     </section>
 
     <section class="my-5">
@@ -558,7 +561,7 @@
             ابدأ في إنشاء إعلانات فيديو ذات أداء عالٍ اليوم!
         </h1>
 
-        <a type="button" href="login.html" class="btn main-btn m-auto">جرب فيدوو الان</a>
+        <a type="button" href="login.php" class="btn main-btn m-auto">جرب فيدوو الان</a>
     </div>
 </section>
 
@@ -572,13 +575,13 @@
         <div class="footer-column">
             <h4>روابط سريعة</h4>
             <ul>
-                <li><a href="index.html">الصفحة الرئيسية</a></li>
-                <li><a href="ecommerce.html">التجارة الالكترونية</a></li>
-                <li><a href="agencies.html">الوكالات</a></li>
-                <li><a href="brands.html">العلامات التجارية</a></li>
+                <li><a href="index.php">الصفحة الرئيسية</a></li>
+                <li><a href="ecommerce.php">التجارة الالكترونية</a></li>
+                <li><a href="agencies.php">الوكالات</a></li>
+                <li><a href="brands.php">العلامات التجارية</a></li>
                 
-                <li><a href="price.html">الأسعار</a></li>
-                <li><a href="creator/register.html">إنضم لمبدعي فيدوو</a></li>
+                <li><a href="price.php">الأسعار</a></li>
+                <li><a href="creator/register.php">إنضم لمبدعي فيدوو</a></li>
 
             </ul>
         </div>
@@ -599,10 +602,10 @@
         <div class="footer-column">
             <h4>السياسات والتعليمات</h4>
             <ul>
-                <li><a href="conditions.html">شروط الخدمة</a></li>
-                <li><a href="policy.html">سياسة الخصوصية</a></li>
-                <li><a href="refund.html">سياسة استرداد الامول</a></li>
-                <li><a href="package-policy.html">سياسة انتهاء صلاحية الِحزم</a></li>
+                <li><a href="conditions.php">شروط الخدمة</a></li>
+                <li><a href="policy.php">سياسة الخصوصية</a></li>
+                <li><a href="refund.php">سياسة استرداد الامول</a></li>
+                <li><a href="package-policy.php">سياسة انتهاء صلاحية الِحزم</a></li>
                 <li><a href="https://blog.vidoo.app/">المدونة</a></li>
                 
             </ul>

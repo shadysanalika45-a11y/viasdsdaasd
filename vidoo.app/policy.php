@@ -1,9 +1,12 @@
+<?php
+declare(strict_types=1);
+?>
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr"  dir="rtl" style="direction: rtl">
 <!-- BEGIN: Head-->
 
 
-<!-- Mirrored from vidoo.app/contact-us by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 22 Nov 2025 12:15:03 GMT -->
+<!-- Mirrored from vidoo.app/policy by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 22 Nov 2025 12:15:12 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 
@@ -71,21 +74,19 @@
 <link href="website/lib/font/Messiri.css" rel="stylesheet">
 
     
-<link rel="stylesheet" href="website/lib/swiper/swiper-bundle.min.css" />
-<script src="website/lib/swiper/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="../cdn.jsdelivr.net/npm/swiper%4010/swiper-bundle.min.css" />
+<script src="../cdn.jsdelivr.net/npm/swiper%4010/swiper-bundle.min.js"></script>
 
-<link rel="stylesheet" type="text/css" href="website/lib/slick/slick.css" />
-<link rel="stylesheet" type="text/css" href="website/lib/slick/slick-theme.css" />
-<link rel="stylesheet" type="text/css" href="website/lib/slick/github-slick-theme.css" />
+<link rel="stylesheet" type="text/css" href="../cdn.jsdelivr.net/gh/kenwheeler/slick%401.8.1/slick/slick.css" />
+<link rel="stylesheet" type="text/css" href="../cdn.jsdelivr.net/gh/kenwheeler/slick%401.8.1/slick/slick-theme.css" />
+<link rel="stylesheet" type="text/css" href="../kenwheeler.github.io/slick/slick/slick-theme.css" />
 
 <link rel="stylesheet" type="text/css" href="website/css/base.css">
 <link rel="stylesheet" type="text/css" href="website/css/style.css">
 <link rel="stylesheet" href="website/css/btns.css" />
-<link rel="stylesheet" href="website/css/for-agency.css" />
+<link rel="stylesheet" href="website/css/policy.css" />
 
-<title>تواصل معنا - فيدوو</title>
-<meta name="description" content="هل لديك أسئلة أو تعليقات؟ تواصل معنا عبر صفحة اتصل بنا في فيدوو، فريقنا هنا لدعمك والإجابة على استفساراتك.">
-<meta name="keywords" content="هل لديك أسئلة أو تعليقات؟ تواصل معنا عبر صفحة اتصل بنا في فيدوو، فريقنا هنا لدعمك والإجابة على استفساراتك.">
+
 
     
     <!-- Google Fonts -->
@@ -124,7 +125,7 @@
     <div class="container-fluid p-0 px-md-4 px-0">
         
 
-            <a class="navbar-brand ms-md-0 ms-2" href="index.html">
+            <a class="navbar-brand ms-md-0 ms-2" href="index.php">
                 <img src="users-asset/images/logo/arabic-logo.png" alt="logo"
                     class="vidoo_logo img-fluid" height="50" width="100">
             </a>
@@ -140,7 +141,7 @@
 
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link " aria-current="page" href="index.html">الصفحة الرئيسية</a>
+                    <a class="nav-link " aria-current="page" href="index.php">الصفحة الرئيسية</a>
                 </li>
 
                 
@@ -148,11 +149,11 @@
                 
                 <li class="nav-item">
                     <a class="nav-link  " aria-current="page"
-                        href="price.html">الأسعار</a>
+                        href="price.php">الأسعار</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link  " aria-current="page" href="creators.html">صُنّاع المحتوى</a>
+                    <a class="nav-link  " aria-current="page" href="creators.php">صُنّاع المحتوى</a>
                 </li>
 
                 <li class="nav-item dropdown">
@@ -165,15 +166,15 @@
                         </svg>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="ecommerce.html">التجارة الالكترونية</a></li>
-                        <li><a class="dropdown-item" href="agencies.html">الوكالات</a></li>
-                        <li><a class="dropdown-item" href="brands.html">العلامات التجارية</a></li>
+                        <li><a class="dropdown-item" href="ecommerce.php">التجارة الالكترونية</a></li>
+                        <li><a class="dropdown-item" href="agencies.php">الوكالات</a></li>
+                        <li><a class="dropdown-item" href="brands.php">العلامات التجارية</a></li>
                     </ul>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link active " aria-current="page"
-                        href="contact-us.html">تواصل معنا</a>
+                    <a class="nav-link  " aria-current="page"
+                        href="contact-us.php">تواصل معنا</a>
                 </li>
 
 
@@ -184,14 +185,14 @@
                                         
                     <li class="nav-item">
 
-                        <a href="login.html" class="nav-link  login">
+                        <a href="login.php" class="nav-link  login">
                             <span class="fw-bold">
                                 تسجيل الدخول
                             </span>
                         </a>
                     </li>
                                                             <li class="nav-item">
-                        <a type="button" href="login.html"
+                        <a type="button" href="login.php"
                             class="btn log-in-button my-md-0 my-2 " type="submit">
                             اطلب الان
                         </a>
@@ -209,72 +210,93 @@
 
 
         
+
+
 <div class="container">
-    <div class="row">
 
+    <div class="section-gap">
 
-    <h1 class="main-color-gradient">
-        ابق على تواصل مع فريق فيدوو
-    </h1>
-
-    <section class="my-4 ">
-        <div>
-
-             <p>
-                يمكنكم الاتصال بنا على <a href="mailto:hello@vidoo.app" class="main-text">hello@vidoo.app</a> إذا كانت لديكم أي أسئلة أو تعليقات حول منصة فيدوو. سيتم الرد عليكم خلال 24 ساعة.
-             </p>
-
-        </div>
-
-        <div class="agency-form">
-
-            <p>او يمكنكم ترك البريد الالكتروني الخاص بكم واستفساركم وفريق الدعم سوف يتواصل معكم في اقرب وقت</p>
-
-            <form method="POST" action="https://vidoo.app/support">
-            <div class="row">
-                <input type="hidden" name="_token" value="p6U4weZ680MitaoiaLfJkptsRFKXRmXfkgEtpLev">
-                <div class="col-md-6 my-2">
-
-
-
-                    <label class="fw-bold mb-2">الاسم</label>
-                    <input type="text" class="form-control agency-form-input" name="name" value="" placeholder="الاسم*">
-                                    </div>
-                <div class="col-md-6 my-2">
-
-                    <label class="fw-bold mb-2">الموقع الإلكتروني (اختياري)</label>
-
-                    <input type="text" class="form-control agency-form-input" name="url" value="" placeholder="الموقع الإلكتروني ">
-                                    </div>
-                <div class="col-md-6 my-2">
-
-                    <label class="fw-bold mb-2">عنوان البريد الإلكتروني</label>
-                    <input type="email" class="form-control agency-form-input" name="email" value="" placeholder="بريدك الإلكتروني*" required>
-                                    </div>
-                <div class="col-md-6 my-2">
-
-                    <label class="fw-bold mb-2">رقم الجوال</label>
-                    <input type="text" class="form-control agency-form-input" name="phone" value="" placeholder="رقم الجوال*">
-                                    </div>
-
-                <div class="col-md-12 my-2">
-
-                    <label class="fw-bold mb-2">كيف يمكننا مساعدك؟</label>
-
-                    <textarea rows="5" class="form-control agency-form-input" name="message" placeholder="اكتب رسالتك">
-                        
-                    </textarea>
-
-                                    </div>
-
-
-            </div>
-            <button class="btn main-btn mt-4">إرسال</button>
-        </div>
-
-
-    </section>
+        <h1 class="main-color-gradient">سياسة الخصوصية</h1>
+        <p class="fw-bold">مرحباً بكم في فيدو!</p>
+        <p>نُقدّر خصوصيتكم ونلتزم بحمايتها. هذه سياسة الخصوصية تُوضح كيفية جمعنا واستخدامنا وحماية معلوماتكم الشخصية عند
+            استخدامكم منصة فيدوو.</p>
     </div>
+
+    <div class="section-gap">
+
+        <h3 class="sub-color-gradient">ما هي المعلومات التي نجمعها؟</h3>
+        <p>نحن نجمع المعلومات الشخصية الأساسية التي تُقدمها لنا عند إنشاء حساب على فيدو، مثل:</p>
+        <ul class="policy-ul">
+            <li><span class="fw-bold">اسم المستخدم:</span> اسم المستخدم الذي تختاره للظهور على المنصة.</li>
+            <li><span class="fw-bold">البريد الإلكتروني:</span> عنوان البريد الإلكتروني الخاص بك.</li>
+            <li><span class="fw-bold">كلمة المرور:</span> كلمة المرور التي تختارها لحماية حسابك.</li>
+            <li><span class="fw-bold">معلومات التعريف:</span> قد نطلب منك تقديم معلومات إضافية، مثل اسمك الكامل، رقم
+                الهاتف، ومعلومات الاتصال.</li>
+        </ul>
+        <p>نحن نجمع أيضًا معلومات استخدام المنصة مثل:</p>
+        <ul class="policy-ul">
+            <li><span>تاريخ ووقت استخدام المنصة:</span> نُسجل متى وأين تستخدم منصة فيدوو.</li>
+            <li><span>الأنشطة داخل المنصة:</span> نُسجل ما هي المحتوىات التي تتصفحها أو تتفاعل معها.</li>
+            <li><span>معلومات الجهاز:</span> نُسجل نوع الجهاز الذي تستخدمه وإصدار نظام التشغيل.</li>
+        </ul>
+    </div>
+
+    <div class="section-gap">
+        <h3 class="sub-color-gradient">كيف نستخدم المعلومات التي نجمعها؟</h3>
+        <p>نُستخدم المعلومات التي نُجمعها لأهداف محددة مثل:</p>
+        <ul class="policy-ul">
+            <li><span class="fw-bold">تقديم خدمة أفضل:</span> لضمان عمل المنصة بكفاءة وتقديم تجربة مستخدم مُحسّنة.</li>
+            <li><span class="fw-bold">تخصيص المحتوى:</span> عرض المحتوى المناسب لك والمُلائم لإهتماماتك.</li>
+            <li><span class="fw-bold">اتصالات مهمة:</span> إرسال إشعارات ورسائل هامّة تُخصّصك مثل التحديثات والعروض
+                الخاصة.</li>
+            <li><span class="fw-bold">التحليل والتطوير:</span> فهم كيف يستخدم المستخدمون المنصة وتحسين الأداء وإضافة
+                ميزات جديدة.</li>
+        </ul>
+
+    </div>
+
+    <div class="section-gap">
+
+        <h3 class="sub-color-gradient">مشاركة المعلومات:</h3>
+        <p>نحن لا نُشارك معلوماتك الشخصية مع أطراف ثالثة لأغراض تسويقية. نُشارك هذه المعلومات فقط مع الجهة التي نستخدم
+            خدمات سحابة البيانات منها وهي شركة [ذكر اسم شركة الخدمات السحابية] لضمان أمن وحماية بياناتك.</p>
+    </div>
+
+    <div class="section-gap">
+
+        <h3 class="sub-color-gradient">حماية المعلومات:</h3>
+        <p>نستخدم تدابير أمنية متطورة لحماية معلوماتك الشخصية من الوصول غير المُرخص له والاستخدام الخاطئ والتغييرات
+            والضياع والتدمير.</p>
+    </div>
+
+    <div class="section-gap">
+
+        <h3 class="sub-color-gradient">حقوقك:</h3>
+        <p>تُمنحك سياسة الخصوصية حقوق مُحدّدة فيما يتعلق بمعلوماتك الشخصية:</p>
+        <ul class="policy-ul">
+            <li><span class="fw-bold">حق الوصول:</span> حق معرفة ما هي المعلومات التي نُخزنها عنك.</li>
+            <li><span class="fw-bold">حق التعديل:</span> حق تعديل أو تصحيح أي معلومات غير دقيقة عنك.</li>
+            <li><span class="fw-bold">حق الحذف:</span> حق حذف معلوماتك الشخصية من قاعدة بياناتنا.</li>
+            <li><span class="fw-bold">حق الرفض:</span> حق الرفض من استخدام معلوماتك الشخصية لأغراض تسويقية.</li>
+        </ul>
+    </div>
+
+    <div class="section-gap">
+
+        <h3 class="sub-color-gradient">تواصل معنا:</h3>
+        <p>يمكنكم الاتصال بنا على <a href="mailto:hello@vidoo.app" class="main-text">hello@vidoo.app</a> إذا كانت لديكم
+            أي أسئلة أو تعليقات حول سياسة الخصوصية هذه.</p>
+    </div>
+
+    <div class="section-gap">
+        <h3 class="sub-color-gradient">التغييرات على سياسة الخصوصية:</h3>
+        <p>نحتفظ بحق تعديل هذه سياسة الخصوصية في أي وقت. سوف نُنشر أي تغييرات على المنصة ونُوصي بمراجعة هذه السياسة
+            بانتظام. استمرار استخدامكم للمنصة بعد نشر أي تغييرات سوف يشكل اعترافًا بقبولكم للتغييرات.</p>
+
+    </div>
+
+    <br><br>
+    <p class="fw-bold">شكرًا لكم على ثقتكم بنا!</p>
 </div>
 
 
@@ -287,13 +309,13 @@
         <div class="footer-column">
             <h4>روابط سريعة</h4>
             <ul>
-                <li><a href="index.html">الصفحة الرئيسية</a></li>
-                <li><a href="ecommerce.html">التجارة الالكترونية</a></li>
-                <li><a href="agencies.html">الوكالات</a></li>
-                <li><a href="brands.html">العلامات التجارية</a></li>
+                <li><a href="index.php">الصفحة الرئيسية</a></li>
+                <li><a href="ecommerce.php">التجارة الالكترونية</a></li>
+                <li><a href="agencies.php">الوكالات</a></li>
+                <li><a href="brands.php">العلامات التجارية</a></li>
                 
-                <li><a href="price.html">الأسعار</a></li>
-                <li><a href="creator/register.html">إنضم لمبدعي فيدوو</a></li>
+                <li><a href="price.php">الأسعار</a></li>
+                <li><a href="creator/register.php">إنضم لمبدعي فيدوو</a></li>
 
             </ul>
         </div>
@@ -314,10 +336,10 @@
         <div class="footer-column">
             <h4>السياسات والتعليمات</h4>
             <ul>
-                <li><a href="conditions.html">شروط الخدمة</a></li>
-                <li><a href="policy.html">سياسة الخصوصية</a></li>
-                <li><a href="refund.html">سياسة استرداد الامول</a></li>
-                <li><a href="package-policy.html">سياسة انتهاء صلاحية الِحزم</a></li>
+                <li><a href="conditions.php">شروط الخدمة</a></li>
+                <li><a href="policy.php">سياسة الخصوصية</a></li>
+                <li><a href="refund.php">سياسة استرداد الامول</a></li>
+                <li><a href="package-policy.php">سياسة انتهاء صلاحية الِحزم</a></li>
                 <li><a href="https://blog.vidoo.app/">المدونة</a></li>
                 
             </ul>
@@ -397,10 +419,11 @@
 <script type="text/javascript" src="website/lib/jquery/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="website/lib/jquery/jquery-migrate-1.2.1.min.js"></script>
 
-
 <script src="website/lib/slick/slick.min.js"></script>
 <script src="website/lib/slick/slick-carousel.min.js"></script>
 <script type="text/javascript" src="website/lib/slick/kenwheeler-slick.min.js"></script>
+
+
 <script>
     $(document).ready(function () {
 
@@ -461,5 +484,5 @@ $().ready(function () {
     <!-- END: Body-->
 
 
-<!-- Mirrored from vidoo.app/contact-us by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 22 Nov 2025 12:15:03 GMT -->
+<!-- Mirrored from vidoo.app/policy by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 22 Nov 2025 12:15:16 GMT -->
 </html>

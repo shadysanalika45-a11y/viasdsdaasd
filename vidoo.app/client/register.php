@@ -1,3 +1,6 @@
+<?php
+declare(strict_types=1);
+?>
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="rtl">
 <!-- BEGIN: Head-->
@@ -95,14 +98,14 @@
                         <!-- Register basic -->
                         <div class="card mb-0">
                             <div class="card-body">
-                                <a href="../index.html" class="brand-logo">
+                                <a href="../index.php" class="brand-logo">
                                     <img src="../users-asset/images/logo/logo-2.png" width="150px" alt="logo">
                                 </a>
 
                                 <h4 class="card-title mb-1">اشترك الآن وابدأ في تعزيز علامتك التجارية!</h4>
                                 <p class="card-text mb-2">انضم إلى فيدوو للوصول إلى شبكة واسعة من صُناع المحتوى المبدعين الذين يمكنهم إحياء رؤيتك. ابدأ في إنشاء حملات تسويقية فعّالة ومحتوى فيديو مخصص لعلامتك التجارية اليوم.</p>
 
-                                <form class="auth-register-form mt-2" action="https://vidoo.app/client/register"
+                                <form class="auth-register-form mt-2" action="../server/register-client.php"
                                     method="POST">
                                     <input type="hidden" name="_token" value="p6U4weZ680MitaoiaLfJkptsRFKXRmXfkgEtpLev">                                    <div class="mb-1">
                                         <label for="name" class="form-label">الاسم</label>
@@ -178,7 +181,7 @@
                                                 tabindex="4"  required />
                                             <label class="form-check-label" for="agree">
                                                 أوافق على  <a
-                                                    href="../policy.html">سياسة الخصوصية والشروط والأحكام</a>
+                                                    href="../policy.php">سياسة الخصوصية والشروط والأحكام</a>
                                             </label>
                                                                                     </div>
                                     </div>
@@ -197,7 +200,7 @@
 
                                 <p class="text-center mt-2">
                                     <span>هل لديك حساب بالفعل؟</span>
-                                    <a href="../login.html">
+                                    <a href="../login.php">
                                         <span>سجّل الدخول بدلاً من ذلك</span>
                                     </a>
                                 </p>

@@ -1,3 +1,6 @@
+<?php
+declare(strict_types=1);
+?>
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="rtl">
 <!-- BEGIN: Head-->
@@ -93,7 +96,7 @@
                 <div class="auth-wrapper auth-cover">
                     <div class="auth-inner row m-0">
                         <!-- Brand logo-->
-                        <a class="brand-logo" href="../index.html">
+                        <a class="brand-logo" href="../index.php">
                             <img src="../users-asset/images/logo/logo.png" alt="logo" width="120px" />
                         </a>
                         <!-- /Brand logo-->
@@ -108,7 +111,7 @@
                         <!-- Register-->
                         <div class="d-flex col-lg-5 align-items-center auth-bg p-0">
                             <div class="col-12 col-sm-8 col-md-6 col-lg-12 px-xl-2 mx-auto">
-                                <form class="mx-5 mt-4" id="register-form" action="https://vidoo.app/creator/register"
+                                <form class="mx-5 mt-4" id="register-form" action="../server/register-creator.php"
                                     method="POST">
                                     <h4 class="card-title mb-1 fw-bolder">انضم إلى مجتمع فيدوو وابدأ رحلتك الإبداعية!
                                     </h4>
@@ -188,7 +191,7 @@
                                                 <input class="form-check-input register-input" type="checkbox"
                                                     id="agree" name="agree" tabindex="4" required />
                                                 <label class="form-check-label" for="agree">
-                                                    أوافق على  <a href="../policy.html">سياسة الخصوصية والشروط والأحكام</a>
+                                                    أوافق على  <a href="../policy.php">سياسة الخصوصية والشروط والأحكام</a>
                                                 </label>
                                             </div>
                                         </div>
@@ -208,7 +211,7 @@
                                 </form>
                                 <p class="text-center mt-1">
                                     <span>هل لديك حساب بالفعل؟</span>
-                                    <a href="../login.html">
+                                    <a href="../login.php">
                                         <span>سجّل الدخول بدلاً من ذلك</span>
                                     </a>
                                 </p>
